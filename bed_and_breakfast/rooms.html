@@ -1,0 +1,158 @@
+<!-- Bed & Breakfast Room Information Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Information</title>
+    <link rel="stylesheet" href="style.css"> <!-- External stylesheet for site-wide styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=MedievalSharp&family=Uncial+Antiqua&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Main site navigation: appears on every page -->
+    <nav>
+        <i class="fa-solid fa-dice-d20"></i> <!-- Font awesome icon -->
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Room Information</a>
+        <a href="request.html">Request Info</a>
+        <i class="fa-solid fa-dice-d20"></i> <!-- Font awesome icon -->
+    </nav>
+<section id="room-header">
+    <h1>Room Information</h1>
+</section>
+    <!-- Room information table: lists all available rooms and their features -->
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Room Name</th> <!-- Name of the room -->
+                    <th style="width: 500px">Room Description</th> <!-- Description of the room's theme and features -->
+                    <th>Image</th> <!-- Themed image for each room -->
+                    <th>Ammenities</th> <!-- List of amenities for each room -->
+                    <th>Occupancy</th> <!-- Maximum number of guests -->
+                    <th>Price</th> <!-- Price per night -->
+                </tr>
+            </thead>
+            <tbody>
+            <!-- Mosslight room row -->
+            <tr>
+                <td>Mosslight</td>
+                <td>Nestled into the base of the inn, Mosslight is a quiet, earth-toned retreat with curved stone walls
+                    and a recessed bed alcove wrapped in ivy and lanternlight. The room evokes the hush of the forest
+                    floor, perfect for grounding and restoration.</td>
+                <td><img src="Images/mosslight.png"
+                        alt="A cozy forest-themed bedroom with moss-covered stone walls, green bedding, and an arched window overlooking lush greenery.">
+                </td>
+                <td>
+                    <ul>
+                        <li>Recessed moss-lined sleeping alcove</li>
+                        <li>Enchanted spring basin with calming water flow</li>
+                        <li>Circular garden-view window near floor level</li>
+                        <li>Firefly lanterns with adjustable glow</li>
+                        <li>Herb-infused woven rugs for scent and softness</li>
+                    </ul>
+                </td>
+                <td>2</td>
+                <td>10 Gold</td>
+            </tr>
+            <!-- Dewshade room row -->
+            <tr>
+                <td>Dewshade</td>
+                <td>A misty, blue-toned loft bedroom with hanging crystal lights, a skylight, and a fountain built into
+                    the wall.</td>
+                <td><img src="Images/dewshade.png"
+                        alt="A misty, blue-toned loft bedroom with hanging crystal lights, a skylight, and a fountain built into the wall.">
+                </td>
+                <td>
+                    <ul>
+                        <li>Enchanted skylight that always shows dawn</li>
+                        <li>Wall-mounted mist fountain with eucalyptus scent</li>
+                        <li>Hanging crystal orbs with ambient glow</li>
+                        <li>Sheer canopy curtains that respond to breeze enchantments</li>
+                        <li>Tall writing desk with forest view</li>
+                    </ul>
+                </td>
+                <td>3</td>
+                <td>15 Gold</td>
+            </tr>
+            <!-- Thistlebend room row -->
+            <tr>
+                <td>Thistlebend</td>
+                <td>A warm, rustic room with golden bedding, dried herbs hanging from wooden beams, and sunlight
+                    streaming through a garden-facing window.</td>
+                <td><img src="Images/thistlebend.png"
+                        alt="A warm, rustic room with golden bedding, dried herbs hanging from wooden beams, and sunlight streaming through a garden-facing window.">
+                </td>
+                <td>
+                    <ul>
+                        <li>Dried herb bundles suspended from ceiling beams</li>
+                        <li>Stone hearth with smokeless warmth enchantment</li>
+                        <li>Window seat with garden view</li>
+                        <li>Small crafting table with built-in herb press</li>
+                        <li>Hand-painted floral wall accents</li>
+                    </ul>
+                </td>
+                <td>2</td>
+                <td>20 Gold</td>
+            </tr>
+            <!-- Emberleaf room row -->
+            <tr>
+                <td>Emberleaf</td>
+                <td> A scholarly, autumn-hued room with an orange bedspread, a crackling fireplace, and botanical wall
+                    designs under golden afternoon light.
+                </td>
+                <td><img src="Images/emberleaf.png"
+                        alt="A scholarly, autumn-hued room with an orange bedspread, a crackling fireplace, and botanical wall designs under golden afternoon light">
+                </td>
+                <td>
+                    <ul>
+                        <li>Stone fireplace with adjustable flame enchantment</li>
+                        <li>Botanical mural wall with seasonal bloom animation</li>
+                        <li>Scroll shelf with rotating lore selections</li>
+                        <li>Writing desk with built-in quill sharpening charm</li>
+                        <li>Dimmable brass sconces</li>
+                    </ul>
+                </td>
+                <td>4</td>
+                <td>25 Gold</td>
+            </tr>
+            <!-- Whisperglow room row -->
+            <tr>
+                <td style="border-bottom: none;">Whisperglow</td>
+                <td style="border-bottom: none;">A tranquil, moonlit bedroom with lavender walls, sheer bed curtains,
+                    glowing lanterns, and a view of a misty forest under a starry sky.</td>
+                <td style="border-bottom: none;"><img src="Images/whisperglow.png"
+                        alt="A tranquil, moonlit bedroom with lavender walls, sheer bed curtains, glowing lanterns, and a view of a misty forest under a starry sky.">
+                </td>
+                <td>
+                    <ul>
+                        <li>Lanterns that project constellations overhead</li>
+                        <li>Four-poster bed with dreamweave curtains</li>
+                        <li>Nightstand with sleep satchel drawer</li>
+                        <li>Moon-facing window with enchanted privacy veil</li>
+                        <li>Dream journal shelf with memory-binding charm</li>
+                    </ul>
+                </td>
+                <td style="border-bottom: none;">5</td>
+                <td style="border-bottom: none;">30 Gold</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- Site footer with contact info -->
+    <footer>
+        <p>&copy; 2025 The Sunleaf Rest. All rights reserved | Contact us: <a
+                href="mailto:innkeeper@sunleafrest.com">innkeeper@sunleafrest.com</a> | <a href="tel:+14175551234">(417)
+                555-1234</a></p>
+    </footer>
+</body>
+
+</html>

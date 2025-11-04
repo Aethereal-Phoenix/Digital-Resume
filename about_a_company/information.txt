@@ -1,0 +1,80 @@
+Website Project: "About a Company"
+Create a two-page website for a fictional or real company that sells products. This project builds on everything you've learned so far—HTML structure, CSS styling, and accessibility practices. Your site should demonstrate thoughtful design, clear organization, and user-friendly navigation.
+
+🌟 Be sure to check the rubric carefully to make sure you earn all your points!  >> 📊 Rubric About a Company.pdfDownload 📊 Rubric About a Company.pdf
+
+📄 Project Overview
+Your website must include:
+
+Two HTML pages
+
+One shared external CSS stylesheet
+
+A consistent color scheme and layout using class/id selectors
+
+Valid code that meets HTML and CSS standards/validates without errors
+
+Design decisions that support accessibility for all user
+
+🧭 Page 1: Company Homepage
+Introduce the company and set the design tone. 
+
+Include:
+
+x-Company name
+x-tagline
+x-slogan
+
+x-Navigation menu linking to the Product page and back
+
+x-At least one Google Font applied to headings or body text
+
+x-A color theme using HEX or RGB values
+
+x-Pseudo class styles (e.g., :hover) for interactive links or buttons
+
+x-Semantic tags such as <header>, <main>, <section>, and <footer>
+
+x-At least one image
+
+🛍 Page 2: Product Page
+x-This page highlights at least 3 products your company offers.
+
+x-Include An <h1> with the product name
+x-Each product should appear in its own section and include:
+
+x-An <h2> with the product name
+
+x-A product image
+
+x-A description that wraps around the image using float
+
+x-Spacing/styling using the Box Model (margin, padding, border)
+
+⚠️ Important: Do not float the product sections. Each section should stack vertically. Only the image inside each section should float to allow text to wrap beside it.
+
+🎨 Shared Stylesheet
+x-Use a single external CSS file for both pages.
+
+Consider how you will create classes that can be used on both pages to maintain a consistent look and feel.
+Example: Use this class on multiple elements across pages for consistency.
+shared class.png
+
+✅ Style & Structure Requirements (Both Pages)
+x-At least one class and one id selector
+
+x-Use of Google Fonts
+
+x-A consistent color palette with accessible contrast
+
+x-Alt text for all images
+
+x-Pseudo classes (like :hover) used on links
+
+x-Semantic HTML elements used appropriately
+
+x-Utilize Border, Margin and Padding to demonstrate understanding of the box model
+x-Well-organized CSS with clear, accurate comments
+
+x-Comments in your HTML <head> with your name and date
+Appropriately commented CSS to explain what each rule does - be clear and specific

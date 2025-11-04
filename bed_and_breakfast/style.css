@@ -1,0 +1,112 @@
+
+/* General site background and text styling */
+body {
+    background-image: url('images/leafy-background.png'); /* subtle leafy background for fantasy theme */
+    position: relative; /* Established an initial positioning for any children */
+    padding-top: 50px; /* space for sticky nav */
+    font-size: xx-large; /* large, readable text */
+    text-shadow:
+    -0.5px -0.5px 0 #ffffff75,
+     0.5px -0.5px 0 #ffffff75,
+    -0.5px  0.5px 0 #ffffff75,
+     0.5px  0.5px 0 #ffffff75; /* subtle white outline for readability */
+}
+
+
+/* Main heading style */
+h1 {
+    font-size: larger;
+}
+
+
+/* Persistent site nav that stays visible while scrolling */
+nav {
+    background-color: #a8c686cc; /* leaf green, semi-transparent */
+    position: sticky;       /* keep nav fixed once it reaches the top */
+    top: 2px;
+    width: 85%;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    z-index: 1000;
+    height: 50px;
+    padding-top: 5px;
+}
+
+
+/* Footer styled to match nav for visual consistency */
+footer {
+    background-color: #a8c686cc;
+    bottom: 5px;
+    width: 85%;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    margin-top: 15px;
+    height: 50px;
+}
+
+
+/* Section backgrounds for content blocks */
+section {
+    background-color: #8B6F4Ecc; /* soft bark brown, semi-transparent */
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border-radius: 15px;
+    font-family: "medievalsharp";
+}
+
+
+/* Paragraph spacing for readability */
+p {
+    margin: 10px 15px 10px 15px;
+}
+
+
+/* Large, bold headers for main site and room pages */
+#bnb-header, #room-header {
+    text-align: center;
+    font-size: 75px;
+    font-family: "Cinzel";
+    font-weight: bolder;
+    background-color: #00000000;
+}
+
+
+/* Link hover effect for accessibility */
+a:hover {
+    color: #FAF9F6; /* parchment white */
+}
+
+
+/* Default link color */
+a {
+    color: #36912a; /* deep green */
+}
+
+
+/* Room info table styling */
+table {
+    border: 2px solid #a8c686;
+    border-radius: 15px;
+    border-collapse: separate; /* Allows border-radius to work */
+    overflow: hidden; /* Ensures corners are clipped visually */
+}
+
+
+/* Table cell borders for row separation */
+td,
+th {
+    border-bottom: 2px solid #fdf6e3;
+}
+
+
+/* Set consistent height for table cells and images */
+td,
+img {
+    height: 500px;
+}
