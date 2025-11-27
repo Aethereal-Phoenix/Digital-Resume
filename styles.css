@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -47,9 +47,12 @@ a {
 
 a:hover {
     color: white;
-    transition: transform 0.3s ease, filter 0.3s ease;   /* Smooth animation */
-    filter: drop-shadow(0 0 20px #7600ff);             /* Red glow around it */
-    animation: glowPulse 5s infinite ease-in-out;        /* Pulsing glow effect */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Smooth animation */
+    filter: drop-shadow(0 0 20px #7600ff);
+    /* Red glow around it */
+    animation: glowPulse 5s infinite ease-in-out;
+    /* Pulsing glow effect */
     transform: scale(1.1) rotate(3deg);
 }
 
@@ -62,16 +65,25 @@ h2 {
 }
 
 /*Classes*/
-.col-project { width: 50%; }
-.col-live    { width: 25%; }
-.col-github  { width: 25%; }
+.col-project {
+    width: 50%;
+}
+
+.col-live {
+    width: 25%;
+}
+
+.col-github {
+    width: 25%;
+}
+
 .hover-tilt {
-  display: inline-block;
-  transition: transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .hover-tilt:hover {
-  transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
 }
 
 
@@ -95,7 +107,7 @@ h2 {
 }
 
 /* Menu icon */
-#menu-toggle{
+#menu-toggle {
     color: white;
     cursor: pointer;
     position: absolute;
@@ -143,7 +155,8 @@ footer {
     color: white;
     padding: 10px;
     text-align: center;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto;
+    /* Pushes footer to bottom */
     width: 100%;
 
 }
@@ -161,16 +174,16 @@ footer {
 }
 
 /* Toggle menu and overlay */
-#menu-toggle:checked ~ #side-menu {
+#menu-toggle:checked~#side-menu {
     left: 0;
 }
 
-#menu-toggle:checked ~ #overlay {
+#menu-toggle:checked~#overlay {
     display: block;
 }
 
 /* Hide menu icon when menu is open */
-#menu-toggle:checked + #menu {
+#menu-toggle:checked+#menu {
     display: none;
 }
 
@@ -186,7 +199,9 @@ footer {
     z-index: 1000;
 }
 
-#about-me, #schooling, #github {
+#about-me,
+#schooling,
+#github {
     margin-top: 20px;
     border-color: blueviolet;
     border-radius: 15px;
@@ -211,48 +226,65 @@ footer {
     margin: 0 auto;
 }
 
+#languages {
+    clear: both;
+}
+
 
 
 /* === Glowing Element === */
 .glow {
-  transition: transform 0.3s ease, filter 0.3s ease;   /* Smooth animation */
-  filter: drop-shadow(0 0 10px #7600ff);             /* Red glow around it */
-  animation: glowPulse 5s infinite ease-in-out;        /* Pulsing glow effect */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Smooth animation */
+    filter: drop-shadow(0 0 10px #7600ff);
+    /* Red glow around it */
+    animation: glowPulse 5s infinite ease-in-out;
+    /* Pulsing glow effect */
 }
 
 /* === Glow Animation === */
 @keyframes glowPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 0px #7600ff);           /* Normal glow */
-  }
-  50% {
-    filter: drop-shadow(0 0 20px #7600ff);           /* Brighter glow mid-pulse */
-  }
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 0px #7600ff);
+        /* Normal glow */
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px #7600ff);
+        /* Brighter glow mid-pulse */
+    }
 }
 
 @media (min-width: 1025px) {
-  #information {
-    display: flex;
-    flex-direction: row;   /* side by side instead of stacked */
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
+    #information {
+        display: flex;
+        flex-direction: row;
+        /* side by side instead of stacked */
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
 
-  }
+    }
 
-  /* GitHub box on the left */
-  #github {
-    order: 2;              /* comes first in the row */
-    max-width: 450px;
-    flex: 2;               /* allow it to grow/shrink */
-    margin-right: 10%;
-  }
+    /* GitHub box on the left */
+    #github {
+        order: 2;
+        /* comes first in the row */
+        max-width: 450px;
+        flex: 2;
+        /* allow it to grow/shrink */
+        margin-right: 10%;
+    }
 
-  /* Schooling box on the right */
-  #schooling {
-    order: 1;              /* comes second in the row */
-    width: auto;
-    flex: 1;               /* give it more space if needed */
-    margin-left: 10%;
-  }
+    /* Schooling box on the right */
+    #schooling {
+        order: 1;
+        /* comes second in the row */
+        width: auto;
+        flex: 1;
+        /* give it more space if needed */
+        margin-left: 10%;
+    }
 }
