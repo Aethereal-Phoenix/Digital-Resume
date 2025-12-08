@@ -89,6 +89,10 @@ th {
   display: none;
 }
 
+img {
+    border-radius: 20px;
+}
+
 
 /* === IDs === */
 #banner {
