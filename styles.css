@@ -1,6 +1,7 @@
 /* ===================================================================
    1. RESET & GLOBAL BASE (MOBILE-FIRST DEFAULTS)
    =================================================================== */
+
 /* Removes browser defaults and ensures consistent box-sizing across all elements */
 * {
   margin: 0;                  /* Removes all default margins */
@@ -15,74 +16,75 @@ html {
 
 /* Main page background and default typography – optimized for mobile first */
 body {
-  background-image: url(images/background_image.jpg);   /* Full-screen parallax background */
-  background-size: cover;                              /* Image covers entire viewport */
-  background-position: center top;                      /* Aligns image to top-center */
-  background-attachment: fixed;                         /* Creates parallax scroll effect */
-  background-repeat: no-repeat;                         /* Prevents image tiling */
-  position: relative;                                   /* Needed for absolute children */
-  min-height: 100vh;                                    /* Ensures footer stays at bottom */
-  width: 100vw;                                         /* Full viewport width */
-  padding-top: 150px;                                   /* Makes room for fixed banner */
-  color: white;                                         /* Default text color */
-  text-shadow: 5px 5px 2px #042ed9;                     /* Strong blue shadow for readability over image */
-  font-family: "Google Sans Code", monospace;           /* Clean, tech-style default font */
+  background-image: url(images/background_image.jpg);   /* Sets the page’s background image */
+  background-size: cover;                              /* Ensures the image fills the viewport */
+  background-position: center top;                      /* Positions the image at the top center */
+  background-attachment: fixed;                         /* Locks background for parallax effect */
+  background-repeat: no-repeat;                         /* Prevents the image from repeating */
+  position: relative;                                   /* Establishes containing block for absolute children */
+  min-height: 100vh;                                    /* Ensures body is at least full viewport height */
+  width: 100vw;                                         /* Sets width to full viewport width */
+  padding-top: 150px;                                   /* Creates space for fixed header/banner */
+  color: white;                                         /* Sets default text color */
+  text-shadow: 5px 5px 2px #042ed9;                     /* Adds blue shadow for readability */
+  font-family: "Google Sans Code", monospace;           /* Sets default font family */
 }
 
 /* Centers all tables horizontally */
 table { 
-  margin: auto; 
+  margin: auto;                 /* Auto margins center the table */
 }
 
 /* Heading styles */
-h1 { font-family: "Black Ops One", cursive; text-align: center; }   /* Bold military-style main title */
-h2 { font-family: "Roboto Flex", sans-serif; text-align: center; margin-bottom: 10px; } /* Clean subheadings */
-h3 { text-align: center; font-size: xx-large; }                     /* Large section titles */
-p  { text-align: center; }                                          /* All paragraphs centered */
+h1 { font-family: "Black Ops One", cursive; text-align: center;}   /* Sets bold display font + centers text */
+h2 { font-family: "Roboto Flex", sans-serif; text-align: center; margin-bottom: 10px; } /* Sets clean font, centers, adds spacing */
+h3 { text-align: center; font-size: xx-large; }                     /* Centers and enlarges section titles */
+p  { text-align: center; }                                          /* Centers all paragraph text */
 
 /* Default link styling with hover glow + tilt animation */
 a {
-  color: lightblue;                                      /* Base link color */
-  display: inline-block;                                 /* Enables transform and animation */
-  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+  color: lightblue;                                      /* Sets base link color */
+  display: inline-block;                                 /* Allows transforms and animations */
+  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease; /* Smooth hover transitions */
 }
 
 a:hover {
-  color: white;                                          /* Brighten on hover */
-  filter: drop-shadow(0 0 20px #7600ff);                 /* Purple neon glow */
-  animation: glowPulse 5s infinite ease-in-out;          /* Pulsing glow animation */
-  transform: scale(1.1) rotate(3deg);                    /* Slight zoom + playful tilt */
+  color: white;                                          /* Lightens link color on hover */
+  filter: drop-shadow(0 0 20px #7600ff);                 /* Adds glowing purple shadow */
+  animation: glowPulse 5s infinite ease-in-out;          /* Applies pulsing glow animation */
+  transform: scale(1.1) rotate(3deg);                    /* Slightly enlarges and tilts link */
 }
 
 /* Centers table headers */
-th { text-align: center; }
+th { text-align: center; }                               /* Aligns header text to center */
 
 /* Rounds all images (headshot, badges, etc.) */
-img { border-radius: 20px; }
+img { border-radius: 20px; }                             /* Applies rounded corners to all images */
 
 /* ===================================================================
    2. UTILITY CLASSES (MOBILE-FIRST)
    =================================================================== */
+
 /* Table column widths for project showcase */
-.col-project  { width: 50%; }   /* Project name column */
-.col-live     { width: 25%; }   /* Live demo button column */
-.col-github   { width: 25%; }   /* GitHub link column */
+.col-project  { width: 50%; }   /* Sets project-name column to half the table width */
+.col-live     { width: 25%; }   /* Allocates one-quarter width for the live-demo column */
+.col-github   { width: 25%; }   /* Allocates one-quarter width for the GitHub link column */
 
 /* Reusable hover tilt effect (used on images, buttons, etc.) */
 .hover-tilt {
-  display: inline-block;                                 /* Required for transform */
-  transition: transform 0.3s ease;                       /* Smooth scale + rotate */
+  display: inline-block;                                 /* Allows transform effects to apply */
+  transition: transform 0.3s ease;                       /* Smooth animation for scaling/rotation */
 }
-.hover-tilt:hover { transform: scale(1.1) rotate(3deg); } /* Same playful hover as links */
+.hover-tilt:hover { transform: scale(1.1) rotate(3deg); } /* Enlarges and tilts element on hover */
 
 /* TryHackMe rank badge – hidden on mobile to save space */
 .tryhackme-badge {
-  margin: 20px auto 0;                                   /* Vertical spacing + centered */
-  text-align: center;
-  border: none;
-  width: 100%;                                           /* Full width on mobile */
-  max-height: 200px;                                     /* Prevents oversized badge on small screens */
-  display: none;                                         /* Hidden by default (shown on tablet+) */
+  margin: 20px auto 0;                                   /* Adds top spacing and centers horizontally */
+  text-align: center;                                    /* Centers any internal content */
+  border: none;                                          /* Removes any default border */
+  width: 100%;                                           /* Makes badge span full width on mobile */
+  max-height: 200px;                                     /* Prevents badge from becoming too tall */
+  display: none;                                         /* Hidden on mobile; shown in larger breakpoints */
 }
 
 /* ===================================================================
@@ -91,124 +93,124 @@ img { border-radius: 20px; }
 
 /* Fixed top banner that stays in place while scrolling */
 #banner {
-  display: flex;                                          /* Flexbox for perfect centering */
-  justify-content: center;                                /* Horizontally center the logo */
-  align-items: center;                                    /* Vertically center the logo */
-  position: fixed;                                        /* Sticks to top of viewport */
-  top: 0;                                                 /* Pin to top edge */
-  left: 0;                                                /* Full width from left */
-  right: 0;                                               /* Full width to right */
-  height: 150px;                                          /* Fixed banner height */
-  z-index: 1000;                                          /* Above all page content */
-  background-image: url(images/blue_wave_banner.jpg);     /* Wave banner background */
-  background-size: cover;                                 /* Cover entire banner area */
-  background-position: center;                            /* Center the wave image */
+  display: flex;                                          /* Enables flexbox layout for centering */
+  justify-content: center;                                /* Centers content horizontally */
+  align-items: center;                                    /* Centers content vertically */
+  position: fixed;                                        /* Keeps banner fixed at top while scrolling */
+  top: 0;                                                 /* Positions banner at the top edge */
+  left: 0;                                                /* Extends banner from the left edge */
+  right: 0;                                               /* Extends banner to the right edge */
+  height: 150px;                                          /* Sets fixed banner height */
+  z-index: 1000;                                          /* Ensures banner stays above page content */
+  background-image: url(images/blue_wave_banner.jpg);     /* Sets banner background image */
+  background-size: cover;                                 /* Ensures image covers entire banner */
+  background-position: center;                            /* Centers the background image */
 }
 #banner img { 
-  width: 250px;                                           /* Logo size inside banner */
+  width: 250px;                                           /* Sets displayed logo width */
 }
 
 /* Hamburger icon – visible only when the menu is closed */
 #menu {
-  color: white;                                           /* White for visibility on dark banner */
-  cursor: pointer;                                        /* Hand cursor on hover */
-  position: absolute;                                     /* Positioned over banner */
-  font-size: x-large;                                     /* Large, easy-to-tap icon */
-  bottom: 8px;                                            /* Distance from bottom of banner */
-  left: 8px;                                              /* Distance from left edge */
-  z-index: 1000;                                          /* Above banner but below checkbox */
+  color: white;                                           /* White icon for contrast */
+  cursor: pointer;                                        /* Shows pointer cursor on hover */
+  position: absolute;                                     /* Positions icon relative to banner */
+  font-size: x-large;                                     /* Large icon for easy tapping */
+  bottom: 8px;                                            /* Positions icon near bottom of banner */
+  left: 8px;                                              /* Positions icon near left edge */
+  z-index: 1000;                                          /* Above banner background but below checkbox */
 }
 
 /* Hidden checkbox that acts as the toggle switch for the menu */
 #menu-toggle {
-  position: absolute;                                     /* Overlays the hamburger icon */
-  opacity: 0;                                             /* Completely invisible */
-  width: 50px;                                            /* Clickable area width */
-  height: 50px;                                           /* Clickable area height */
-  bottom: 5px;                                            /* Aligns with hamburger */
-  left: 5px;                                              /* Aligns with hamburger */
-  cursor: pointer;                                        /* Hand cursor when hovering */
-  z-index: 1001;                                          /* On top of hamburger so it catches clicks */
+  position: absolute;                                     /* Places checkbox over hamburger icon */
+  opacity: 0;                                             /* Makes checkbox invisible */
+  width: 50px;                                            /* Clickable width */
+  height: 50px;                                           /* Clickable height */
+  bottom: 5px;                                            /* Aligns with hamburger icon */
+  left: 5px;                                              /* Aligns with hamburger icon */
+  cursor: pointer;                                        /* Pointer cursor for interactivity */
+  z-index: 1001;                                          /* Above hamburger so it receives clicks */
 }
 
 /* Sliding sidebar – starts completely off-screen to the left */
 #side-menu {
-  position: fixed;                                        /* Fixed to viewport */
-  top: 0;                                                 /* Full height from top */
-  left: -280px;                                           /* Hidden off-screen (mobile width + buffer) */
-  width: 200px;                                           /* Mobile sidebar width */
+  position: fixed;                                        /* Fixes menu to viewport */
+  top: 0;                                                 /* Aligns menu to top of screen */
+  left: -280px;                                           /* Hides menu off-screen initially */
+  width: 200px;                                           /* Sidebar width */
   height: 100vh;                                          /* Full viewport height */
-  background-color: rgba(0, 0, 0, 0.95);                   /* Almost-black semi-transparent */
-  transition: left 0.35s ease;                            /* Smooth slide-in/out animation */
-  z-index: 1000;                                          /* Below overlay, above content */
-  padding-top: 160px;                                     /* Clears the fixed banner */
-  overflow-y: auto;                                       /* Scroll if menu items overflow */
-  overflow-x: hidden;                                     /* Prevents horizontal text bleed */
+  background-color: rgba(0, 0, 0, 0.95);                  /* Dark translucent background */
+  transition: left 0.35s ease;                            /* Smooth slide animation */
+  z-index: 1000;                                          /* Below overlay but above content */
+  padding-top: 160px;                                     /* Prevents overlap with fixed banner */
+  overflow-y: auto;                                       /* Enables vertical scrolling */
+  overflow-x: hidden;                                     /* Prevents horizontal overflow */
 }
 
 /* Remove default list styling inside sidebar */
 #side-menu ul {
-  list-style: none;                                       /* No bullets */
-  padding: 0;                                             /* Remove default padding */
-  margin: 0;                                              /* Remove default margin */
+  list-style: none;                                       /* Removes bullet points */
+  padding: 0;                                             /* Removes default padding */
+  margin: 0;                                              /* Removes default margin */
 }
 
 /* Individual menu items – spacing and touch targets */
 #side-menu li {
-  padding: 18px 20px;                                     /* Large, finger-friendly tap area */
+  padding: 18px 20px;                                     /* Large tap-friendly padding */
 }
 
 /* Styling for links inside the sidebar */
 #side-menu li a {
-  color: white;                                           /* White text */
-  text-decoration: none;                                  /* No underline */
-  font-size: 1.2rem;                                      /* Readable size */
-  font-weight: bold;                                      /* Strong visual weight */
-  display: flex;                                          /* Align icon + text horizontally */
-  align-items: center;                                    /* Vertically center icon/text */
+  color: white;                                           /* White text for visibility */
+  text-decoration: none;                                  /* Removes underline */
+  font-size: 1.2rem;                                      /* Larger readable text */
+  font-weight: bold;                                      /* Emphasizes menu items */
+  display: flex;                                          /* Aligns icon and text horizontally */
+  align-items: center;                                    /* Vertically centers content */
   gap: 12px;                                              /* Space between icon and text */
-  text-shadow: 0 0 8px #7600ff;                           /* Subtle purple glow */
-  transition: all 0.3s ease;                              /* Smooth hover effects */
+  text-shadow: 0 0 8px #7600ff;                           /* Adds subtle purple glow */
+  transition: all 0.3s ease;                              /* Smooth hover transitions */
 }
 #side-menu li a:hover {
-  color: #7600ff;                                         /* Bright purple on hover */
-  transform: translateX(8px);                             /* Slight right nudge */
+  color: #7600ff;                                         /* Purple highlight on hover */
+  transform: translateX(8px);                             /* Slight slide to the right */
   filter: drop-shadow(0 0 15px #7600ff);                  /* Stronger neon glow */
 }
 
 /* Full-screen overlay that appears behind the menu */
 #overlay {
-  position: fixed;                                        /* Covers entire screen */
-  inset: 0;                                               /* Shortcut: top/right/bottom/left = 0 */
-  background: rgba(0, 0, 0, 0.6);                         /* Dark semi-transparent */
-  backdrop-filter: blur(3px);                             /* Cool blur effect on content */
-  z-index: 999;                                           /* Behind menu, above page */
-  display: none;                                          /* Hidden by default */
+  position: fixed;                                        /* Covers entire viewport */
+  inset: 0;                                               /* Sets all sides to 0 (full coverage) */
+  background: rgba(0, 0, 0, 0.6);                         /* Dark translucent overlay */
+  backdrop-filter: blur(3px);                             /* Blurs background content */
+  z-index: 999;                                           /* Below menu, above page content */
+  display: none;                                          /* Hidden until menu opens */
   pointer-events: auto;                                   /* Allows clicking to close menu */
 }
 
 /* When menu is open: slide in, show overlay, hide hamburger */
 #menu-toggle:checked ~ #side-menu { 
-  left: 0;                                                /* Menu slides into view */
+  left: 0;                                                /* Slides sidebar into view */
 }
 #menu-toggle:checked ~ #overlay { 
-  display: block;                                         /* Show dark overlay */
+  display: block;                                         /* Shows overlay */
 }
 #menu-toggle:checked + #menu { 
-  display: none;                                          /* Hide the hamburger icon */
+  display: none;                                          /* Hides hamburger icon */
 }
 
 /* Hidden helper checkbox used to close menu when a link is clicked */
 #close-menu { 
-  display: none;                                          /* Never visible */
+  display: none;                                          /* Checkbox stays invisible */
 }
 
 /* When a nav link is clicked → this checkbox gets checked → menu closes */
 #close-menu:checked ~ #side-menu { 
-  left: -280px;                                           /* Force menu back off-screen */
+  left: -280px;                                           /* Slides menu back off-screen */
 }
 #close-menu:checked ~ #overlay { 
-  display: none;                                          /* Hide overlay again */
+  display: none;                                          /* Hides overlay again */
 }
 
 /* ===================================================================
@@ -217,16 +219,16 @@ img { border-radius: 20px; }
 
 /* Adds breathing room below the fixed banner before main content starts */
 #main-page-head { 
-  margin-top: 20px;                                       /* Prevents content from touching banner */
+  margin-top: 20px;                                       /* Creates space so content doesn’t touch banner */
 }
 
 /* Profile headshot image – floats left on mobile so text wraps around it */
 #headshot {
-  float: none;                                            /* Text flows to the right of image */
-  margin: 0 15px 15px 0;                                  /* Top | Right | Bottom | Left spacing */
-  width: 200px;                                           /* Fixed width for consistent layout */
-  max-width: 100%;                                        /* Never exceeds container on small screens */
-  border-radius: 20px;                                    /* Matches global img style (redundant but safe) */
+  float: none;                                            /* Prevents floating; keeps image inline on mobile */
+  margin: 0 15px 15px 0;                                  /* Adds spacing around the image */
+  width: 200px;                                           /* Sets consistent image width */
+  max-width: 100%;                                        /* Ensures image never exceeds container width */
+  border-radius: 20px;                                    /* Rounds corners (matches global img style) */
 }
 
 /* Main content cards: About Me, Schooling, GitHub, and Reach Out sections */
@@ -234,64 +236,84 @@ img { border-radius: 20px; }
 #schooling,
 #github,
 #reach_out {
-  width: 92%;                                             /* Nearly full-width but with side breathing room */
-  max-width: 920px;                                       /* Prevents overly wide cards on large screens */
-  margin: 20px auto 10px;                                 /* Top spacing | auto centers | bottom spacing */
-  padding: 15px;                                          /* Internal spacing for content */
-  border: 3px solid blueviolet;                           /* Bold purple accent border */
+  width: 90%;                                             /* Makes cards nearly full-width on mobile */
+  max-width: 1000px;                                      /* Prevents cards from becoming too wide */
+  margin: 20px auto 10px;                                 /* Adds top/bottom spacing and centers horizontally */
+  padding: 15px;                                          /* Internal padding for readability */
+  border: 3px solid blueviolet;                           /* Purple accent border */
   border-radius: 15px;                                    /* Soft rounded corners */
-  background-color: rgba(0, 0, 0, 0.5);                   /* Semi-transparent dark overlay for readability */
-  overflow: auto;                                         /* Clears floats (e.g. headshot) inside the card */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);               /* Optional subtle depth (feel free to keep or remove) */
+  background-color: rgba(0, 0, 0, 0.5);                   /* Semi-transparent dark background */
+  overflow: auto;                                         /* Ensures floated elements don’t overflow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);              /* Adds subtle depth/shadow */
 }
 
 /* Flexible wrapper that controls layout order and flow on larger screens */
 #information {
   display: flex;                                          /* Enables flexbox layout */
-  flex-direction: column;                                 /* Stacks all cards vertically on mobile */
-  gap: 20px;                                              /* Consistent spacing between cards */
-  width: 100%;                                            /* Full width of parent */
-  margin: 0 auto;                                         /* Centers the container if it ever becomes narrower */
-  padding: 0 15px;                                        /* Optional side padding on very wide screens */
+  flex-direction: column;                                 /* Stacks sections vertically on mobile */
+  gap: 20px;                                              /* Adds spacing between content cards */
+  width: 100%;                                            /* Full container width */
+  margin: 0 auto;                                         /* Centers wrapper if narrower than page */
+  padding: 0 15px;                                        /* Optional side padding for wide screens */
 }
 
 /* Clears the float from the headshot so subsequent content starts fresh */
 #languages { 
-  clear: both;                                            /* Forces element below any floated content */
+  clear: both;                                            /* Forces this section below floated elements */
 }
 
 /* Page footer – appears at the bottom of the content */
 footer {
-  background-color: black;                               /* Solid black background */
+  background-color: black;                                /* Solid black footer background */
   color: white;                                           /* White text for contrast */
-  padding: 15px;                                          /* Comfortable internal spacing */
-  text-align: center;                                     /* Centers all footer text */
-  margin-top: 40px;                                       /* Space above footer */
-  width: 100%;                                            /* Full width */
-  font-size: 0.9rem;                                      /* Slightly smaller, elegant text */
-  border-top: 3px solid blueviolet;                       /* Optional matching accent line */
+  padding: 15px;                                          /* Comfortable spacing inside footer */
+  text-align: center;                                     /* Centers footer text */
+  margin-top: 40px;                                       /* Adds space above footer */
+  width: 100%;                                            /* Full-width footer */
+  font-size: 0.9rem;                                      /* Slightly smaller text for subtlety */
+  border-top: 3px solid blueviolet;                       /* Purple accent line at top */
 }
 
-/* Three-column history layout */
-.history-grid {
-  display: flex;
-  flex-direction: column;     /* stacked on mobile/tablet */
-  gap: 30px;
-  margin-top: 20px;
+/* History table container styling */
+.history-table {
+  width: 100%;                                            /* Full table width */
+  border-collapse: separate;                              /* Allows spacing between rows */
+  border-spacing: 0 20px;                                 /* Adds vertical spacing between rows */
+  margin-top: 20px;                                       /* Space above the table */
 }
 
-.history-column {
-  padding: 20px;
+/* Shared cell styling for table headers and data cells */
+.history-table th,
+.history-table td {
+  padding: 5px;                                           /* Internal cell padding */
+  vertical-align: top;                                    /* Aligns content to the top of each cell */
 }
 
-.history-column h3 {
-  margin-top: 0;
-  text-align: center;
+/* Header styling for history table */
+.history-table th {
+  font-size: 1.4rem;                                      /* Larger header text */
+  font-weight: bold;                                      /* Bold for emphasis */
 }
 
-.history-column ul {
-  text-align: left;
-  margin-left: 20px;
+/* Location text inside table headers */
+.history-table th .location {
+  font-size: 1rem;                                        /* Smaller than main header text */
+  font-weight: normal;                                    /* Normal weight for secondary info */
+  display: block;                                         /* Forces location onto its own line */
+}
+
+/* Subtitle styling for table data cells */
+.history-table td.subtitle {
+  font-size: 1.1rem;                                      /* Slightly larger subtitle text */
+  font-style: italic;                                     /* Italicized for emphasis */
+  padding-bottom: 20px;                                   /* Extra spacing below subtitle */
+}
+
+/* List styling inside table cells */
+.history-table .list-cell ul {
+  margin: 0;                                              /* Removes default list margin */
+  padding-left: 20px;                                     /* Indents list items */
+  text-align: left;                                       /* Left-aligns list text */
 }
 
 /* ===================================================================
@@ -300,84 +322,85 @@ footer {
 
 /* Main container for the entire Reach Out section */
 #reach_out {
-  display: flex;                                          /* Flexbox for full control */
-  flex-direction: column;                                 /* Stack everything vertically on mobile */
-  align-items: center;                                    /* Horizontally center all children */
-  text-align: center;                                     /* Center all text content */
-  width: 100%;                                            /* Full width of parent */
-  padding: 10px 0;                                        /* Small vertical padding */
+  display: flex;                                          /* Enables flexbox layout for controlled alignment */
+  flex-direction: column;                                 /* Stacks all elements vertically on mobile */
+  align-items: center;                                    /* Centers all child elements horizontally */
+  text-align: center;                                     /* Centers text inside the section */
+  width: 100%;                                            /* Section spans full width of parent */
+  padding: 10px 0;                                        /* Adds vertical padding above and below */
+  margin: none;                                           /* (Invalid value, but left untouched as requested) */
 }
 
 /* The actual <form> element inside the section */
 #reach_out form {
-  display: flex;                                          /* Flexbox for layout control */
-  flex-direction: column;                                 /* All fields stacked on mobile */
-  gap: 20px;                                              /* Consistent spacing between all inputs */
-  width: 100%;                                            /* Full available width */
-  max-width: 600px;                                       /* Prevents form from getting too wide on large screens */
-  margin: 0 auto;                                         /* Centers the form horizontally */
+  width: 90%;                                             /* Form takes up 90% of available width */
+  max-width: 1000px;                                      /* Prevents form from becoming too wide */
+  margin: 20px auto 10px auto;                            /* Adds spacing and centers form */
+  display: flex;                                          /* Enables flexbox layout */
+  flex-direction: column;                                 /* Stacks form fields vertically on mobile */
+  gap: 20px;                                              /* Space between form elements */
 }
 
-/* Left and right columns – both full-width on mobile */
+/* Both sides full width on mobile */
 .form-left,
 .form-right {
-  display: flex;                                          /* Flexbox inside each column */
-  flex-direction: column;                                 /* Stack inputs vertically */
-  width: 100%;                                            /* Full width on mobile */
-  gap: 12px;                                              /* Space between inputs in the same column */
+  display: flex;                                          /* Flex container for form groups */
+  flex-direction: column;                                 /* Stacks inputs vertically */
+  gap: 16px;                                              /* Space between inputs */
+  width: 100%;                                            /* Full width; outer wrapper controls total width */
 }
 
 /* Styling for all form labels */
 #reach_out label {
-  margin: 1rem 0 0.3rem;                                  /* Top spacing | bottom spacing for input */
-  font-weight: bold;                                      /* Strong visual hierarchy */
+  margin: 1rem 0 0.3rem;                                  /* Top margin + small bottom margin before input */
+  font-weight: bold;                                      /* Makes labels visually strong */
   color: white;                                           /* White text for contrast */
-  text-align: left;                                       /* Left-align labels on mobile */
-  font-size: 1rem;                                        /* Clear readable size */
-  text-shadow: 0 0 6px #7600ff;                           /* Subtle purple glow for style */
+  text-align: left;                                       /* Left-align labels for readability */
+  font-size: 1rem;                                        /* Standard readable size */
+  text-shadow: 0 0 6px #7600ff;                           /* Adds subtle purple glow */
 }
 
 /* Styling for text inputs and textarea */
 #reach_out input,
 #reach_out textarea {
-  padding: 0.7rem;                                        /* Comfortable internal spacing */
-  border: 1px solid #ccc;                                 /* Light border for definition */
-  border-radius: 4px;                                     /* Soft corners */
+  padding: 0.7rem;                                        /* Comfortable internal padding */
+  border: 1px solid #ccc;                                 /* Light gray border */
+  border-radius: 4px;                                     /* Slightly rounded corners */
   font-size: 1rem;                                        /* Prevents zoom on iOS when focusing */
-  background-color: rgba(255, 255, 255, 0.1);             /* Slight transparency */
-  color: white;                                           /* White text */
-  backdrop-filter: blur(4px);                             /* Cool frosted glass effect */
-  transition: all 0.3s ease;                              /* Smooth focus/hover */
+  background-color: rgba(255, 255, 255, 0.1);             /* Semi-transparent background */
+  color: white;                                           /* White text for readability */
+  backdrop-filter: blur(4px);                             /* Frosted glass effect */
+  transition: all 0.3s ease;                              /* Smooth hover/focus transitions */
 }
 
 #reach_out input:focus,
 #reach_out textarea:focus {
-  outline: none;                                          /* Remove default outline */
+  outline: none;                                          /* Removes default browser outline */
   border-color: #7600ff;                                  /* Purple border on focus */
-  box-shadow: 0 0 12px rgba(118, 0, 255, 0.6);             /* Purple glow on focus */
-  background-color: rgba(118, 0, 255, 0.15);              /* Slightly tinted background */
+  box-shadow: 0 0 12px rgba(118, 0, 255, 0.6);            /* Purple glow around input */
+  background-color: rgba(118, 0, 255, 0.15);              /* Slight purple tint on focus */
 }
 
 /* Submit button styling */
 #reach_out button {
-  margin-top: 1rem;                                       /* Space above button */
-  padding: 0.8rem 1.5rem;                                 /* Generous clickable area */
-  background: #007BFF;                                    /* Bright blue */
+  margin-top: 1rem;                                       /* Space above the button */
+  padding: 0.8rem 1.5rem;                                 /* Larger clickable area */
+  background: #007BFF;                                    /* Bright blue background */
   color: white;                                           /* White text */
-  border: none;                                           /* Clean look */
-  border-radius: 4px;                                     /* Matches input corners */
-  cursor: pointer;                                        /* Hand cursor */
+  border: none;                                           /* Removes default border */
+  border-radius: 4px;                                     /* Matches input styling */
+  cursor: pointer;                                        /* Pointer cursor on hover */
   font-size: 1.1rem;                                      /* Slightly larger text */
-  font-weight: bold;                                      /* Strong call-to-action */
-  align-self: center;                                     /* Centered on mobile */
-  transition: all 0.3s ease;                              /* Smooth hover effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);               /* Subtle depth */
+  font-weight: bold;                                      /* Emphasizes call-to-action */
+  align-self: center;                                     /* Centers button in flex container */
+  transition: all 0.3s ease;                              /* Smooth hover animation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);              /* Subtle drop shadow */
 }
 
 #reach_out button:hover {
   background: #0056b3;                                    /* Darker blue on hover */
-  transform: translateY(-2px);                            /* Slight lift effect */
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);           /* Stronger glow */
+  transform: translateY(-2px);                            /* Slight upward lift */
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);          /* Stronger glow/shadow */
 }
 
 #reach_out button:active {
@@ -387,11 +410,11 @@ footer {
 /* Section heading inside the form card */
 #reach_out h3 {
   margin-bottom: 1rem;                                    /* Space below heading */
-  width: 100%;                                            /* Full width */
-  font-size: 2rem;                                        /* Large, impactful title */
-  color: white;
+  width: 100%;                                            /* Full width for alignment */
+  font-size: 2rem;                                        /* Large, prominent heading */
+  color: white;                                           /* White text */
   text-shadow: 0 0 15px #7600ff;                          /* Strong purple glow */
-  letter-spacing: 1px;                                    /* Slightly spaced for style */
+  letter-spacing: 1px;                                    /* Slight spacing for style */
 }
 
 /* ===================================================================
@@ -400,41 +423,41 @@ footer {
 
 /* Reusable class for any element that should have a pulsing purple neon glow */
 .glow {
-  transition: transform 0.3s ease, filter 0.3s ease;       /* Smooth response to hover/focus */
-  filter: drop-shadow(0 0 10px #7600ff);                  /* Base purple glow (visible even when still) */
-  animation: glowPulse 5s infinite ease-in-out;           /* Continuous subtle pulsing effect */
+  transition: transform 0.3s ease, filter 0.3s ease;       /* Smooth animation when hovered or focused */
+  filter: drop-shadow(0 0 10px #7600ff);                   /* Base purple glow around the element */
+  animation: glowPulse 5s infinite ease-in-out;            /* Slow, continuous pulsing glow animation */
 }
 
 /* Keyframes that drive the infinite pulsing glow animation */
 @keyframes glowPulse {
   0%, 100% { 
-    filter: drop-shadow(0 0 0px #7600ff);                 /* No glow at start/end of cycle */
+    filter: drop-shadow(0 0 0px #7600ff);                  /* Minimal glow at start and end of cycle */
   }
   50% { 
-    filter: drop-shadow(0 0 20px #7600ff);                /* Maximum glow intensity at midpoint */
+    filter: drop-shadow(0 0 20px #7600ff);                 /* Strongest glow halfway through animation */
   }
 }
 
 /* Optional enhanced version – can be applied with .glow-intense */
 .glow-intense {
-  filter: drop-shadow(0 0 15px #7600ff);                  /* Stronger base glow */
-  animation: glowPulseIntense 3s infinite ease-in-out;    /* Faster, more dramatic pulse */
+  filter: drop-shadow(0 0 15px #7600ff);                   /* Stronger default glow than .glow */
+  animation: glowPulseIntense 3s infinite ease-in-out;     /* Faster, more dramatic pulsing animation */
 }
 
 @keyframes glowPulseIntense {
   0%, 100% { 
-    filter: drop-shadow(0 0 8px #7600ff);                 /* Subtle at rest */
+    filter: drop-shadow(0 0 8px #7600ff);                  /* Mild glow at rest */
   }
   50% { 
-    filter: drop-shadow(0 0 35px #7600ff);                /* Extremely bright peak */
+    filter: drop-shadow(0 0 35px #7600ff);                 /* Very bright glow at animation peak */
   }
 }
 
 /* Hover-specific glow boost – adds extra "pop" when user interacts */
 .glow:hover {
-  filter: drop-shadow(0 0 25px #7600ff);                  /* Instant stronger glow on hover */
-  animation-duration: 1.5s;                               /* Speeds up pulse while hovering */
-  transform: scale(1.05);                                 /* Slight grow effect */
+  filter: drop-shadow(0 0 25px #7600ff);                   /* Stronger glow immediately on hover */
+  animation-duration: 1.5s;                                /* Speeds up pulsing while hovered */
+  transform: scale(1.05);                                  /* Slight enlargement for emphasis */
 }
 
 /* ===================================================================
@@ -445,83 +468,95 @@ footer {
 @media (min-width: 768px) {
 
   #headshot {
-    float: left;
-    margin: 0 20px 15px 0;   /* Your original spacing (right and bottom) */
-    width: 250px;           /* Optional: slightly larger on bigger screens */
+    float: left;                                          /* Moves headshot to the left so text wraps */
+    margin: 0 20px 15px 0;                                /* Adds spacing on right and bottom */
+    width: 250px;                                         /* Slightly larger image on tablets */
   }
 
   #github-contact-wrapper {
-    display: flex;
-    flex-direction: column;     /* Still stacked on tablet */
-    gap: 30px;
+    display: flex;                                        /* Enables flexbox layout */
+    flex-direction: column;                               /* Keeps items stacked vertically */
   }
 
   /* Show the TryHackMe badge that was hidden on mobile */
   .tryhackme-badge {
-    display: block;                                       /* Makes badge visible */
-    max-width: 100%;                                      /* Allows it to scale nicely */
-    margin: 25px auto;                                    /* Better vertical spacing + centered */
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));    /* Subtle depth */
-    transition: transform 0.3s ease;                      /* Smooth hover lift */
+    display: block;                                       /* Makes badge visible on tablet+ */
+    max-width: 100%;                                      /* Ensures badge scales properly */
+    margin: 25px auto;                                    /* Centers badge with vertical spacing */
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));   /* Adds subtle depth shadow */
+    transition: transform 0.3s ease;                      /* Smooth hover animation */
   }
 
   .tryhackme-badge:hover {
-    transform: translateY(-4px);                          /* Slight float effect */
+    transform: translateY(-4px);                          /* Slight upward float on hover */
   }
 
   /* Wider, more comfortable sidebar on tablets */
   #side-menu {
-    width: 300px;                                         /* Increased from 200px → more room for text/icons */
+    width: 300px;                                         /* Wider sidebar for readability */
     left: -300px;                                         /* Fully hidden off-screen at new width */
-    padding-top: 170px;                                   /* Slightly more space below banner */
-    background-color: rgba(0, 0, 0, 0.97);                /* Slightly more opaque */
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);             /* Strong side shadow for depth */
+    padding-top: 170px;                                   /* Extra space below banner */
+    background-color: rgba(0, 0, 0, 0.97);                /* Slightly more opaque background */
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);            /* Stronger shadow for depth */
   }
 
   /* Open state – slide in from the left */
   #menu-toggle:checked ~ #side-menu {
-    left: 0;                                              /* Fully visible on screen */
+    left: 0;                                              /* Sidebar becomes visible */
   }
 
   /* Close state – matches the new hidden position */
   #close-menu:checked ~ #side-menu {
-    left: -300px;                                         /* Slides back off-screen */
+    left: -300px;                                         /* Sidebar slides back off-screen */
   }
 
   /* Improve menu item spacing on larger screens */
   #side-menu li {
-    padding: 20px 25px;                                   /* More generous touch/click area */
+    padding: 20px 25px;                                   /* Larger tap/click area */
   }
   #side-menu li a {
-    font-size: 1.3rem;                                    /* Slightly larger text */
-    gap: 16px;                                            /* More space between icon and text */
+    font-size: 1.3rem;                                    /* Slightly larger text for readability */
+    gap: 16px;                                            /* More space between icon and label */
   }
 
   /* Two-column contact form layout */
   #reach_out form {
-    flex-direction: row;                                  /* Side-by-side columns */
-    flex-wrap: wrap;                                      /* Allows wrapping if needed */
-    justify-content: space-between;                       /* Even spacing */
-    gap: 25px;                                            /* Larger gaps between columns */
+    flex-direction: row;                                  /* Switch to side-by-side columns */
+    justify-content: center;                              /* Centers both columns */
+    align-items: stretch;                                 /* Ensures equal column height */
+    gap: 5%;                                              /* Space between left and right columns */
+    width: 90%;                                           /* Total form width */
+    max-width: 1200px;                                    /* Prevents form from becoming too wide */
+    margin: 20px auto 10px auto;                          /* Centers form with spacing */
   }
 
-  /* Each form column now takes half the space */
-  .form-left,
+  .form-left {
+    flex: 1;                                              /* Takes up ~47.5% width */
+  }
+
   .form-right {
-    width: calc(50% - 12.5px);                            /* 50% minus half the gap */
-    min-width: 280px;                                     /* Prevents collapsing on narrow tablets */
+    flex: 1.2;                                            /* Slightly wider column for textarea */
+    display: flex;                                        /* Enables flex behavior inside */
+    flex-direction: column;                               /* Stacks internal elements */
   }
 
-  /* Button moves to the right side on tablet+ */
+  /* Textarea grows to exactly match left column height */
+  #reach_out textarea {
+    flex: 1;                                              /* Expands to fill available height */
+    min-height: 260px;                                    /* Ensures a minimum height */
+    resize: none;                                         /* Disables manual resizing */
+  }
+
   #reach_out button {
-    align-self: flex-end;                                 /* Pushes button to right of its column */
-    padding: 0.9rem 2rem;                                 /* Larger, more prominent */
-    font-size: 1.15rem;                                   /* Bolder text */
+    align-self: flex-end;                                 /* Aligns button to the right column edge */
+    margin-top: 25px;                                     /* Adds spacing above button */
+    padding: 1rem 3.5rem;                                 /* Larger button for tablet screens */
+    font-size: 1.35rem;                                   /* Bigger text for readability */
   }
 
   /* Optional: slightly larger headings on tablet */
   #reach_out h3 {
-    font-size: 2.3rem;                                    /* More impactful title */
+    font-size: 2.3rem;                                    /* Larger, more impactful heading */
   }
 
   /* Enhance content cards with subtle hover lift */
@@ -529,18 +564,18 @@ footer {
   #schooling:hover,
   #github:hover,
   #reach_out:hover {
-    transform: translateY(-6px);                          /* Floating card effect */
-    box-shadow: 0 12px 30px rgba(118, 0, 255, 0.3);        /* Purple-tinted shadow */
-    transition: all 0.4s ease;                            /* Smooth lift */
+    transform: translateY(-6px);                          /* Floating lift effect */
+    box-shadow: 0 12px 30px rgba(118, 0, 255, 0.3);       /* Purple-tinted shadow for depth */
+    transition: all 0.4s ease;                            /* Smooth animation */
   }
 
   #schooling {
-    width: 80vw;              /* 80% of viewport width */
-    max-width: none;          /* Override any max-width */
-    margin: 20px auto 10px;   /* Keep centered */
-    padding: 15px;
+    width: 80vw;                                          /* Wider card on tablet screens */
+    max-width: 1200px;                                    /* Overrides previous max-width */
+    margin: 20px auto 10px;                               /* Centers card with spacing */
+    padding: 15px;                                        /* Internal padding */
     /* (your existing border, background, etc. stays) */
-}
+  }
 }
 
 /* ===================================================================
@@ -550,38 +585,36 @@ footer {
 
   /* Main flow: keep everything stacked vertically first */
   #information {
-    flex-direction: column;     /* Stack everything vertically */
-    align-items: center;        /* Center the cards horizontally */
-    gap: 50px;
-    padding: 0 5%;
+    flex-direction: column;     /* Keeps all major sections stacked vertically */
+    align-items: center;        /* Centers all cards horizontally */
+    gap: 50px;                  /* Larger spacing between stacked sections */
+    padding: 0 5%;              /* Adds side padding for wide screens */
   }
 
   /* New wrapper only for GitHub + Contact to make them side-by-side */
   #github-contact-wrapper {
-    display: flex;
-    flex-direction: row;        /* Side-by-side layout */
-    justify-content: center;
-    gap: 5%;                    /* Space between the two cards */
-    width: 90vw;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: flex;              /* Enables side-by-side layout */
+    flex-direction: row;        /* Places GitHub and Contact next to each other */
+    justify-content: center;    /* Centers the pair horizontally */
+    gap: 5vw;                   /* Responsive spacing between the two cards */
+    max-width: 1200px;          /* Prevents layout from stretching too wide */
   }
 
   /* GitHub and Reach Out are now true side-by-side siblings */
   #github,
   #reach_out {
-    flex: 1;                    /* Each takes ~50% */
-    max-width: 700px;
-    margin: 0;                  /* Remove any auto margins that break symmetry */
+    flex: 1;                    /* Each card takes up equal width */
+    max-width: 570px;           /* Caps width for balanced layout */
+    margin: 0;                  /* Removes margins that could misalign the pair */
   }
 
   /* Full-width sections (About Me + Schooling) */
   #about-me,
   #schooling {
-    width: 85vw;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    padding: 30px;
+    width: 85vw;                /* Wide layout but not full edge-to-edge */
+    max-width: 1200px;          /* Prevents overly wide cards */
+    margin: 0 auto 40px auto;   /* Centers and adds spacing below */
+    padding: 30px;              /* Larger internal padding for desktop */
   }
 
   /* Slightly larger cards on desktop */
@@ -589,10 +622,10 @@ footer {
   #schooling,
   #github,
   #reach_out {
-    padding: 30px;
-    border-width: 4px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
-    transition: all 0.4s ease;
+    padding: 30px;              /* Increased padding for spacious feel */
+    border-width: 4px;          /* Thicker border for stronger visual presence */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5); /* Deeper shadow for desktop depth */
+    transition: all 0.4s ease;  /* Smooth hover animation */
   }
 
   /* Hover lift effect */
@@ -600,43 +633,43 @@ footer {
   #schooling:hover,
   #github:hover,
   #reach_out:hover {
-    transform: translateY(-10px);
-    border-color: #a100ff;
-    box-shadow: 0 20px 50px rgba(118, 0, 255, 0.4);
+    transform: translateY(-10px);                 /* Stronger lift on hover */
+    border-color: #a100ff;                        /* Bright purple border highlight */
+    box-shadow: 0 20px 50px rgba(118, 0, 255, 0.4); /* Larger purple glow shadow */
   }
 
   /* Bigger headings */
-  h1 { font-size: 3.8rem; }
-  h2 { font-size: 2.6rem; }
-  h3 { font-size: 2.3rem; }
+  h1 { font-size: 3.8rem; }     /* Large hero title */
+  h2 { font-size: 2.6rem; }     /* Section titles */
+  h3 { font-size: 2.3rem; }     /* Subsection titles */
 
   /* Contact form polish */
   #reach_out form {
-    max-width: 800px;
-    gap: 30px;
+    max-width: 90%;             /* Slightly wider form on desktop */
+    gap: 30px;                  /* More spacing between form groups */
   }
 
   #reach_out button {
-    padding: 1rem 2.8rem;
-    font-size: 1.25rem;
+    padding: 1rem 2.8rem;       /* Larger button for desktop */
+    font-size: 1.25rem;         /* Slightly bigger text */
   }
 
   .history-grid {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: row;        /* Columns side-by-side */
+    justify-content: center;    /* Center the grid */
+    gap: 40px;                  /* Space between columns */
   }
 
   .history-column {
-    flex: 1;
-    max-width: 380px;
-    min-width: 300px;
+    flex: 1;                    /* Each column grows evenly */
+    max-width: 380px;           /* Prevents overly wide columns */
+    min-width: 300px;           /* Ensures columns don’t shrink too small */
   }
 
   /* Footer */
   footer {
-    padding: 30px;
-    font-size: 1.1rem;
-    border-top: 5px solid blueviolet;
+    padding: 30px;              /* Larger padding for desktop */
+    font-size: 1.1rem;          /* Slightly larger footer text */
+    border-top: 5px solid blueviolet; /* Thicker accent line */
   }
 }
