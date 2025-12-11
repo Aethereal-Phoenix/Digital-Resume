@@ -2,203 +2,235 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-    <div id="banner">
-        <img class="glow hover-tilt" src="images/alex_sprague.png"
-            alt="Blue and purple bird with wings streched upwards, Banner underneath that says Aethereal Phoenix">
-        <input type="checkbox" id="menu-toggle" hidden>
-        <label for="menu-toggle" id="menu">☰ Naviation</label>
-        <label for="menu-toggle" id="overlay"></label>
+  <div id="banner">
+    <img class="glow hover-tilt" src="images/alex_sprague.png"
+      alt="Blue and purple bird with wings streched upwards, Banner underneath that says Aethereal Phoenix">
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" id="menu">☰ Naviation</label>
+    <label for="menu-toggle" id="overlay"></label>
 
-        <nav id="side-menu">
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#schooling">Schooling</a></li>
-                <li><a href="#github">GitHub</a></li>
-                <li><a href="#reach_out">Contact information</a></li>
-            </ul>
-        </nav>
+    <nav id="side-menu">
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#schooling">Schooling</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#reach_out">Contact information</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <h1 id="main-page-head">Forging Websites, one page at a time.</h1>
+
+
+  <section id="about-me">
+    <h2>About Me</h2>
+    <img id="headshot" src="images/headshot.jpg"
+      alt="Adult male with a short read beard, black rectangular glasses and a tan cowbow hat staring off into the distance with a slight smile">
+    <p id="about-me-p">
+      I see every project as a journey: a challenge to solve, a puzzle to unlock, and a chance to create something
+      lasting. With CSS and responsive design as my tools, I focus on clarity over complexity, building websites
+      that feel seamless across devices. My values—Christianity, persistence, dedication, and hard work—guide me
+      both in life and in code. As a U.S. Army veteran, I carry forward the discipline and resilience I gained in
+      service, applying them to every project I take on. Outside of development, you’ll often find me immersed in
+      D&D campaigns, roleplaying adventures, or tackling problem‑solving puzzles, all of which sharpen my
+      creativity and adaptability. What defines me most is my drive to reach the final goal, no matter how many
+      new skills I need to learn along the way.
+    </p>
+    <br>
+    <h3 id="languages">Languages known</h3>
+    <ul>
+      <li>C#</li>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+  </section>
+
+  <div id="information">
+    <section id="schooling">
+  <h2>Schooling & Work History</h2>
+
+  <div class="history-grid">
+    <!-- Column 1: College -->
+    <div class="history-column">
+      <h3>Ozarks Technical Community College — Springfield, MO</h3>
+      <h4>Associate of Science in Computer Science (In Progress, Expected 2027)</h4>
+      <ul>
+        <li>Primary focus on C# development, with additional coursework in HTML and CSS</li>
+        <li>Emphasis on responsive design and clarity in coding practices</li>
+        <li>Maintained a 4.0 GPA throughout current studies</li>
+        <li>Actively expanding knowledge of C# through independent study</li>
+        <li>Currently designing a companion program for ARK: Survival Evolved to optimize breeding mechanics</li>
+      </ul>
     </div>
 
-    <h1 id="main-page-head">Forging Websites, one page at a time.</h1>
+    <!-- Column 2: Army -->
+    <div class="history-column">
+      <h3>United States Army — Fort Stewart, GA (May 2011 – October 2014)</h3>
+      <h4>13D AFATD Specialist, E4 Specialist, 1‑9 FA, 3rd Infantry Division</h4>
+      <ul>
+        <li>Honorable Discharge</li>
+        <li>Developed discipline, teamwork, and problem‑solving skills</li>
+        <li>Maintained composure under pressure and strengthened leadership abilities</li>
+      </ul>
+    </div>
 
+    <!-- Column 3: Walmart -->
+    <div class="history-column">
+      <h3>Walmart(2014–Present)</span></h3>
+      <ul>
+        <li>Cashier</li>
+        <li>Frozen, Dairy, Meat and Produce Associate</li>
+        <li>Stocking 2 Associate</li>
+        <li>Automotive Sales Associate</li>
+        <li>Automotive Service Writer</li>
+        <li>Automotive Service Technician</li>
+        <li>Automotive Service Manager</li>
+        <li>Automotive Team Lead</li>
+        <li>Stocking 2 Team Lead</li>
+        <li>Overnight Stocking Associate</li>
+      </ul>
+    </div>
+  </div>
+</section>
+    
+    <div id="github-contact-wrapper">
+      <section id="github">
+        <h2>Github</h2>
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <img id="headshot" src="images/headshot.jpg"
-            alt="Adult male with a short read beard, black rectangular glasses and a tan cowbow hat staring off into the distance with a slight smile">
-        <p id="about-me-p">
-            I see every project as a journey: a challenge to solve, a puzzle to unlock, and a chance to create something
-            lasting. With CSS and responsive design as my tools, I focus on clarity over complexity, building websites
-            that feel seamless across devices. My values—Christianity, persistence, dedication, and hard work—guide me
-            both in life and in code. As a U.S. Army veteran, I carry forward the discipline and resilience I gained in
-            service, applying them to every project I take on. Outside of development, you’ll often find me immersed in
-            D&D campaigns, roleplaying adventures, or tackling problem‑solving puzzles, all of which sharpen my
-            creativity and adaptability. What defines me most is my drive to reach the final goal, no matter how many
-            new skills I need to learn along the way.
-        </p>
-        <br>
-        <h3 id="languages">Languages known</h3>
-        <ul>
-            <li>C#</li>
-            <li>HTML</li>
-            <li>CSS</li>
-        </ul>
-    </section>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3">CIS 120-Introduction to Programing ( C# )</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-project">All Projects</td>
+              <td></td>
+              <td class="col-github"><a href="" target="_blank">GitHub Repo</a></td>
+            </tr>
+          </tbody>
+        </table>
 
-    <div id="information">
-  <section id="schooling">
-    <h2>Schooling & Work History</h2>
-    <h3>Ozarks Technical Community College — Springfield, MO</h3>
-    <h4>Associate of Science in Computer Science (In Progress, Expected 2027)</h4>
-    <ul>
-      <li>-Primary focus on C# development, with additional coursework in HTML and CSS</li>
-      <li>-Emphasis on responsive design and clarity in coding practices</li>
-      <li>-Maintained a 4.0 GPA throughout current studies</li>
-      <li>-Actively expanding knowledge of C# through independent study</li>
-      <li>-Currently designing a companion program for ARK: Survival Evolved to optimize breeding
-          mechanics, applying problem‑solving and practical development skills</li>
-    </ul>
-    <br>
-    <h3>United States Army — Fort Stewart, GA (May 2011 – October 2014)</h3>
-    <h4>13D AFATD Specialist, E4 Specialist, 1‑9 FA, 3rd Infantry Division</h4>
-    <ul>
-      <li>-Honorable Discharge</li>
-      <li>-Developed discipline, teamwork, and problem‑solving skills</li>
-      <li>-Maintained composure under pressure and strengthened leadership abilities</li>
-    </ul>
-    <br>
-    <h2>Work History</h2>
-    <h3>Walmart</h3>
-    <h4>2014-Present</h4>
-    <ul>
-      <li>-Cashier</li>
-      <li>-Frozen, Dairy, Meat and Produce Associate</li>
-      <li>-Stocking 2 Associate</li>
-      <li>-Automotive Sales Associate</li>
-      <li>-Automotive Service Writer</li>
-      <li>-Automotive Service Technician</li>
-      <li>-Automotive Service Manager</li>
-      <li>-Automotive Team Lead</li>
-      <li>-Stocking 2 Team Lead</li>
-      <li>-Overnight Stocking Associate</li>
-    </ul>
-  </section>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3">CIS 130-Website Development ( HTML & CSS )</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-project">About a Company</td>
+              <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-About-a-Company/"
+                  target="_blank">Live</a></td>
+              <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-About-a-Company"
+                  target="_blank">GitHub Repo</a></td>
+            </tr>
+            <tr>
+              <td class="col-project">Bed and Breakfast</td>
+              <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-Bed-and-Breakfast/"
+                  target="_blank">Live</a></td>
+              <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-Bed-and-Breakfast"
+                  target="_blank">GitHub Repo</a></td>
+            </tr>
+            <tr>
+              <td class="col-project">The Funyon</td>
+              <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-The_Funyon/"
+                  target="_blank">Live</a></td>
+              <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-The_Funyon"
+                  target="_blank">GitHub Repo</a></td>
+            </tr>
+            <tr>
+              <td class="col-project">Fit for Fitness</td>
+              <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-Fit_for_Fitness/"
+                  target="_blank">Live</a></td>
+              <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-Fit_for_Fitness"
+                  target="_blank">GitHub Repo</a></td>
+            </tr>
+            <tr>
+              <td class="col-project">Pawfect Pet Care</td>
+              <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-Pawfect_Pet_Care/"
+                  target="_blank">Live</a></td>
+              <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-Pawfect-Pet-Care"
+                  target="_blank">GitHub Repo</a></td>
+            </tr>
+          </tbody>
+        </table>
 
-  <section id="github">
-    <h2>Github</h2>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3">Other Learning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-project">C# Players Guide</td>
+              <td></td>
+              <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/My-Csharp-Players-guide-Journey"
+                  target="_blank">GitHub Repo</a></td>
+            </tr>
+            <tr>
+              <td class="col-project">TryHackMe</td>
+              <td></td>
+              <td class="col-github"><a href="https://tryhackme.com/p/AetherealPhoenix" target="_blank">My Profile</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-    <table>
-      <thead>
-        <tr><th colspan="3">CIS 120-Introduction to Programing ( C# )</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="col-project">All Projects</td>
-          <td></td>
-          <td class="col-github"><a href="" target="_blank">GitHub Repo</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table>
-      <thead>
-        <tr><th colspan="3">CIS 130-Website Development ( HTML & CSS )</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="col-project">About a Company</td>
-          <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-About-a-Company/" target="_blank">Live</a></td>
-          <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-About-a-Company" target="_blank">GitHub Repo</a></td>
-        </tr>
-        <tr>
-          <td class="col-project">Bed and Breakfast</td>
-          <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-Bed-and-Breakfast/" target="_blank">Live</a></td>
-          <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-Bed-and-Breakfast" target="_blank">GitHub Repo</a></td>
-        </tr>
-        <tr>
-          <td class="col-project">The Funyon</td>
-          <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-The_Funyon/" target="_blank">Live</a></td>
-          <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-The_Funyon" target="_blank">GitHub Repo</a></td>
-        </tr>
-        <tr>
-          <td class="col-project">Fit for Fitness</td>
-          <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-Fit_for_Fitness/" target="_blank">Live</a></td>
-          <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-Fit_for_Fitness" target="_blank">GitHub Repo</a></td>
-        </tr>
-        <tr>
-          <td class="col-project">Pawfect Pet Care</td>
-          <td class="col-live"><a href="https://aethereal-phoenix.github.io/CIS_130-Pawfect_Pet_Care/" target="_blank">Live</a></td>
-          <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/CIS_130-Pawfect-Pet-Care" target="_blank">GitHub Repo</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table>
-      <thead>
-        <tr><th colspan="3">Other Learning</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="col-project">C# Players Guide</td>
-          <td></td>
-          <td class="col-github"><a href="https://github.com/Aethereal-Phoenix/My-Csharp-Players-guide-Journey" target="_blank">GitHub Repo</a></td>
-        </tr>
-        <tr>
-          <td class="col-project">TryHackMe</td>
-          <td></td>
-          <td class="col-github"><a href="https://tryhackme.com/p/AetherealPhoenix" target="_blank">My Profile</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <iframe class="tryhackme-badge"
-      src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937331"></iframe>
-      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f46eca2e-4bb1-4d7e-8f4d-4d3861faeb5d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script> 
-  </section>
-</div>
+        <iframe class="tryhackme-badge"
+          src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937331"></iframe>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f46eca2e-4bb1-4d7e-8f4d-4d3861faeb5d"
+          data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      </section>
+    
 
     <section id="reach_out">
-        <h3>Reach out</h3>
-        <form>
-            <div class="form-left">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="First and Last name" required>
+      <h3>Reach out</h3>
+      <form>
+        <div class="form-left">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="First and Last name" required>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Email">
-            </div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Email">
+        </div>
 
-            <div class="form-right">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="8" placeholder="Your message"></textarea>
-            </div>
-        </form>
-        <button type="submit">Send it</button>
+        <div class="form-right">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="8" placeholder="Your message"></textarea>
+        </div>
+      </form>
+      <button type="submit">Send it</button>
     </section>
+  </div>
+  </div>
 
 
-    <footer id="site-footer">
-        <p>&copy; 2025 Alex Sprague | Aethereal_Phoenix | Digital Resume • Est. 1993 | <a
-                href="mailto:a.lee.sprague@gmail.com">Email</a> | <a href="tell:+14175992429">Call Me</a> | <a
-                href="#top">Back to top</a></p>
-    </footer>
+  <footer id="site-footer">
+    <p>&copy; 2025 Alex Sprague | Aethereal_Phoenix | Digital Resume • Est. 1993 | <a
+        href="mailto:a.lee.sprague@gmail.com">Email</a> | <a href="tell:+14175992429">Call Me</a> | <a href="#top">Back
+        to top</a></p>
+  </footer>
 </body>
 
 </html>
