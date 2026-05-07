@@ -1,156 +1,573 @@
 <template>
-  <div class="projects">
+  <div class="projects-page">
 
     <!-- ========================= -->
-    <!-- MAIN PROJECTS SECTION     -->
+    <!-- HERO SECTION              -->
+    <!-- ========================= -->
+    <section class="hero">
+
+      <h1>My Projects</h1>
+
+      <p class="eyebrow">Portfolio</p>
+      
+      <p class="hero-text">
+        A collection of coursework, personal projects, and ongoing learning
+        focused on web development, software engineering, and cybersecurity.
+      </p>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FEATURED PROJECTS         -->
     <!-- ========================= -->
     <section class="section">
 
-      <!-- Section Title -->
-      <h1 class="title">My Projects</h1>
-      <br>
-      <br>
-      <h2>(HTML & CSS)</h2>
+      <div class="section-heading">
+        <h2>Featured Projects</h2>
 
-      <!-- Column Headers -->
-      <div class="row header">
-        <span>Project</span>
-        <span>Live</span>
-        <span>Repository</span>
+        <p>
+          Selected projects showcasing modern web development,
+          software engineering, and UI design.
+        </p>
       </div>
 
-      <!-- ========================= -->
-      <!-- PROJECT ROWS              -->
-      <!-- ========================= -->
-      <!-- Each row = ONE project -->
-      <!-- Copy/paste a row to add more -->
+      <div class="project-grid">
 
-      <div class="row">
-        <span>About a Company</span>
-        <a href="https://aethereal-phoenix.github.io/CIS_130-About-a-Company/" target="_blank">Live</a>
-        <a href="https://github.com/Aethereal-Phoenix/CIS_130-About-a-Company" target="_blank">GitHub Repo</a>
-      </div>
+        <article
+          v-for="project in featuredProjects"
+          :key="project.title"
+          class="project-card"
+        >
 
-      <div class="row">
-        <span>Bed and Breakfast</span>
-        <a href="https://aethereal-phoenix.github.io/CIS_130-Bed-and-Breakfast/" target="_blank">Live</a>
-        <a href="https://github.com/Aethereal-Phoenix/CIS_130-Bed-and-Breakfast" target="_blank">GitHub Repo</a>
-      </div>
+          <div class="card-content">
 
-      <div class="row">
-        <span>The Funyon</span>
-        <a href="https://aethereal-phoenix.github.io/CIS_130-The_Funyon/" target="_blank">Live</a>
-        <a href="https://github.com/Aethereal-Phoenix/CIS_130-The_Funyon" target="_blank">GitHub Repo</a>
-      </div>
+            <div class="card-top">
 
-      <div class="row">
-        <span>Fit for Fitness</span>
-        <a href="https://aethereal-phoenix.github.io/CIS_130-Fit_for_Fitness/" target="_blank">Live</a>
-        <a href="https://github.com/Aethereal-Phoenix/CIS_130-Fit_for_Fitness" target="_blank">GitHub Repo</a>
-      </div>
+              <h3>{{ project.title }}</h3>
 
-      <div class="row">
-        <span>Pawfect Pet Care</span>
-        <a href="https://aethereal-phoenix.github.io/CIS_130-Pawfect_Pet_Care/" target="_blank">Live</a>
-        <a href="https://github.com/Aethereal-Phoenix/CIS_130-Pawfect_Pet_Care" target="_blank">GitHub Repo</a>
-      </div>
+              <p class="description">
+                {{ project.description }}
+              </p>
 
-      <div class="row">
-        <span>The Lost Coin</span>
-        <a href="https://aethereal-phoenix.github.io/CIS_130-Final/" target="_blank">Live</a>
-        <a href="https://github.com/Aethereal-Phoenix/CIS_130-Final" target="_blank">GitHub Repo</a>
-      </div>
+            </div>
 
-      <div class="row">
-        <span>My Digital Resume (This Page)</span>
-       <a href="https://alsprague.tech" target="_blank">Live</a>
-        <a href="https://github.com/Aethereal-Phoenix/Digital-Resume" target="_blank">GitHub Repo</a>
+            <!-- TECH TAGS -->
+            <div class="tags">
+
+              <span
+                v-for="tech in project.tech"
+                :key="tech"
+                class="tag"
+              >
+                {{ tech }}
+              </span>
+
+            </div>
+
+          </div>
+
+          <!-- ACTION BUTTONS -->
+          <div class="card-actions">
+
+            <a :href="project.live" target="_blank" class="btn primary">
+              Live Site
+            </a>
+
+            <a :href="project.repo" target="_blank" class="btn secondary">
+              GitHub
+            </a>
+
+          </div>
+
+        </article>
+
       </div>
 
     </section>
 
     <!-- ========================= -->
-    <!-- OTHER LEARNING SECTION    -->
+    <!-- OTHER LEARNING            -->
     <!-- ========================= -->
     <section class="section">
 
-      <h2 class="subtitle">Other Learning</h2>
+      <div class="section-heading">
+        <h2>Other Learning</h2>
 
-      <div class="row">
-        <span>C# Players Guide</span>
-        <span></span> <!-- Empty column to keep alignment -->
-        <a href="https://github.com/Aethereal-Phoenix/Csharp_Players_Guide_5th_Edition" target="_blank">GitHub Repo</a>
+        <p>
+          Continuous learning outside formal coursework.
+        </p>
       </div>
 
-      <div class="row">
-        <span>TryHackMe</span>
-        <span></span>
-        <a href="https://tryhackme.com/p/AetherealPhoenix" target="_blank">My Profile</a>
-      </div>
+      <div class="learning-grid">
 
+        <div
+          v-for="item in learning"
+          :key="item.title"
+          class="learning-card"
+        >
+
+          <div>
+
+            <h3>{{ item.title }}</h3>
+
+            <p>{{ item.description }}</p>
+
+          </div>
+
+          <a :href="item.link" target="_blank" class="btn secondary">
+            View
+          </a>
+
+        </div>
+
+      </div>
 
     </section>
+
   </div>
+
+
+    <!-- ========================= -->
+    <!-- ADDITIONAL PROJECTS       -->
+    <!-- ========================= -->
+    <section class="section">
+
+      <details class="additional-projects">
+
+        <summary>
+          Additional Web Development Projects
+        </summary>
+
+        <p class="additional-text">
+          Earlier coursework and foundational web development projects
+          focused on responsive layouts, semantic HTML, and CSS design.
+        </p>
+
+        <div class="project-grid additional-grid">
+
+          <article
+            v-for="project in additionalProjects"
+            :key="project.title"
+            class="project-card small-card"
+          >
+
+            <div class="card-content">
+
+              <div class="card-top">
+
+                <h3>{{ project.title }}</h3>
+
+                <p class="description">
+                  {{ project.description }}
+                </p>
+
+              </div>
+
+              <!-- TECH TAGS -->
+              <div class="tags">
+
+                <span
+                  v-for="tech in project.tech"
+                  :key="tech"
+                  class="tag"
+                >
+                  {{ tech }}
+                </span>
+
+              </div>
+
+            </div>
+
+            <!-- ACTION BUTTONS -->
+            <div class="card-actions">
+
+              <a :href="project.live" target="_blank" class="btn primary">
+                Live Site
+              </a>
+
+              <a :href="project.repo" target="_blank" class="btn secondary">
+                GitHub
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </details>
+
+    </section>
 </template>
 
 <script setup>
-// No logic yet — keep structure clear first
+
+const featuredProjects = [
+  {
+    title: 'Ark Survival Evolved Breeding Optimizer',
+    description: 'A web based application that automates and simplifies the complex breeding mechanic in A:SE to make it easy for anyone.',
+    tech: ['C#', 'HTML', 'CSS', 'ASP.NET'],
+    live: '...',
+    repo: '...'
+  },
+
+  {
+    title: 'The Lost Coin',
+    description: 'Final course project combining multiple HTML and CSS concepts into a polished multi-page experience.',
+    tech: ['HTML', 'CSS'],
+    live: 'https://aethereal-phoenix.github.io/CIS_130-Final/',
+    repo: 'https://github.com/Aethereal-Phoenix/CIS_130-Final'
+  },
+
+  {
+    title: 'Digital Resume',
+    description: 'Modern Vue-powered portfolio and digital resume website showcasing projects, coursework, and ongoing learning.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Vue', 'Vite'],
+    live: 'https://alsprague.tech',
+    repo: 'https://github.com/Aethereal-Phoenix/Digital-Resume'
+  }
+]
+
+const additionalProjects = [
+  {
+    title: 'About a Company',
+    description: 'Responsive informational business website built with HTML and CSS.',
+    tech: ['HTML', 'CSS'],
+    live: 'https://aethereal-phoenix.github.io/CIS_130-About-a-Company/',
+    repo: 'https://github.com/Aethereal-Phoenix/CIS_130-About-a-Company'
+  },
+
+  {
+    title: 'Bed and Breakfast',
+    description: 'Multi-page hospitality website focused on layout and responsive design.',
+    tech: ['HTML', 'CSS'],
+    live: 'https://aethereal-phoenix.github.io/CIS_130-Bed-and-Breakfast/',
+    repo: 'https://github.com/Aethereal-Phoenix/CIS_130-Bed-and-Breakfast'
+  },
+
+  {
+    title: 'The Funyon',
+    description: 'Satirical news-style website exploring typography and layout structure.',
+    tech: ['HTML', 'CSS'],
+    live: 'https://aethereal-phoenix.github.io/CIS_130-The_Funyon/',
+    repo: 'https://github.com/Aethereal-Phoenix/CIS_130-The_Funyon'
+  },
+
+  {
+    title: 'Fit for Fitness',
+    description: 'Fitness-focused website emphasizing responsive UI and clean structure.',
+    tech: ['HTML', 'CSS'],
+    live: 'https://aethereal-phoenix.github.io/CIS_130-Fit_for_Fitness/',
+    repo: 'https://github.com/Aethereal-Phoenix/CIS_130-Fit_for_Fitness'
+  },
+
+  {
+    title: 'Pawfect Pet Care',
+    description: 'Pet care website with responsive layouts and accessible navigation.',
+    tech: ['HTML', 'CSS'],
+    live: 'https://aethereal-phoenix.github.io/CIS_130-Pawfect_Pet_Care/',
+    repo: 'https://github.com/Aethereal-Phoenix/CIS_130-Pawfect_Pet_Care'
+  }
+]
+
+const learning = [
+  {
+    title: 'C# Players Guide',
+    description: 'Exercises and projects completed while studying advanced C# concepts.',
+    link: 'https://github.com/Aethereal-Phoenix/Csharp_Players_Guide_5th_Edition'
+  },
+
+  {
+    title: 'TryHackMe',
+    description: 'Hands-on cybersecurity labs and penetration testing practice.',
+    link: 'https://tryhackme.com/p/AetherealPhoenix'
+  }
+]
+
 </script>
 
 <style scoped>
 
-/* Page wrapper */
-.projects {
-  padding: 2rem 1rem;
+/* ========================= */
+/* PAGE LAYOUT               */
+/* ========================= */
+
+.projects-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 1.5rem;
 }
 
-/* Section spacing */
+/* ========================= */
+/* HERO                      */
+/* ========================= */
+
+.hero {
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* ========================= */
+/* SECTIONS                  */
+/* ========================= */
+
 .section {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
-/* Titles */
-.title {
-  margin-bottom: 1rem;
+.section-heading {
+  margin-bottom: 2rem;
 }
 
-.subtitle {
-  margin-bottom: 1rem;
-}
-
-/* ========================= */
-/* ROW SYSTEM (IMPORTANT)    */
-/* ========================= */
-
-/*
-  Grid layout:
-  Column 1 → Project Name
-  Column 2 → Live Link
-  Column 3 → Repo Link
-*/
-.row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  padding: 0.5rem 0;
-  align-items: center;
-}
-
-/* Header row styling */
-.header {
-  font-weight: bold;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+.section-heading h2 {
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-/* Links */
-a {
-  text-decoration: underline;
-  cursor: pointer;
+.section-heading p {
+  opacity: 0.7;
 }
 
-/* Optional hover polish */
-a:hover {
+/* ========================= */
+/* PROJECT GRID              */
+/* ========================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ========================= */
+/* PROJECT CARD              */
+/* ========================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 320px;
+
+  padding: 1.5rem;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.small-card {
+  min-height: 280px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-top h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ========================= */
+/* TAGS                      */
+/* ========================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.4rem 0.8rem;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========================= */
+/* BUTTONS                   */
+/* ========================= */
+
+.card-actions {
+  display: flex;
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.75rem 1rem;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: white;
+  color: black;
+}
+
+.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ========================= */
+/* ADDITIONAL PROJECTS       */
+/* ========================= */
+
+.additional-projects {
+  padding: 1.5rem;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.additional-projects summary {
+  cursor: pointer;
+
+  list-style: none;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.additional-projects summary:hover {
+  opacity: 0.8;
+}
+
+.additional-projects summary::-webkit-details-marker {
+  display: none;
+}
+
+.additional-projects[open] summary {
+  margin-bottom: 1rem;
+}
+
+.additional-text {
   opacity: 0.7;
+
+  margin-bottom: 2rem;
+
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* LEARNING SECTION          */
+/* ========================= */
+
+.learning-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.learning-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.learning-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.learning-card p {
+  opacity: 0.7;
+}
+
+/* ========================= */
+/* MOBILE                    */
+/* ========================= */
+
+@media (max-width: 700px) {
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .learning-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
 }
 
 </style>

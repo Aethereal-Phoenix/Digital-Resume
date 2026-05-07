@@ -19,7 +19,9 @@
 .about {
   max-width: 650px;
   margin: 0 auto;
+  
   text-align: center;
+  animation: fadeUp 0.8s ease-out;
 }
 
 .about p {

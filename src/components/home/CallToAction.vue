@@ -1,17 +1,32 @@
 <template>
-  <div class="cta">
-    <h2>Want to see more?</h2>
-    <p>Check out my projects or learn more about me.</p>
+  <div class="cta text-center fade-up">
 
-    <div class="buttons">
-      <router-link to="/projects" class="primary">
+    <h2 class="mb-3">
+      Want to see more?
+    </h2>
+
+    <p class="mb-4 opacity-75">
+      Check out my projects or learn more about me.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+      <router-link
+        to="/projects"
+        class="btn btn-primary px-4 py-2 primary-btn"
+      >
         View Projects
       </router-link>
 
-      <router-link to="/about" class="secondary">
+      <router-link
+        to="/about"
+        class="btn btn-outline-light px-4 py-2 secondary-btn"
+      >
         About Me
       </router-link>
+
     </div>
+
   </div>
 </template>
 
@@ -19,29 +34,50 @@
 </script>
 
 <style scoped>
+
+/* ========================= */
+/* CTA                       */
+/* ========================= */
+
 .cta {
-  text-align: center;
+  animation: fadeUp 0.8s ease-out;
 }
 
-.buttons {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
+/* ========================= */
+/* BUTTONS                   */
+/* ========================= */
 
-.primary {
+.primary-btn {
   background: #4f46e5;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
+  border-color: #4f46e5;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
-.secondary {
-  border: 1px solid #ccc;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
+.primary-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
+
+.secondary-btn {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ========================= */
+/* ANIMATION                 */
+/* ========================= */
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out;
+}
+
 </style>

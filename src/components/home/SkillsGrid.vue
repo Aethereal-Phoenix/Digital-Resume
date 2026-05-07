@@ -60,6 +60,7 @@ const frameworks = [
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  animation: fadeUp 0.8s ease-out;
 }
 
 /* CATEGORY */

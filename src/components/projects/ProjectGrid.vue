@@ -1,19 +1,34 @@
 <template>
-  <div class="grid">
-    <div 
-      v-for="project in displayedProjects" 
-      :key="project.id" 
-      class="card"
-    >
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.description }}</p>
+  <div class="projects-section">
+
+    <div class="grid">
+      <div
+        v-for="project in displayedProjects"
+        :key="project.id"
+        class="card"
+      >
+        <div class="card-content">
+
+          <div class="card-top">
+            <span class="tag">Project</span>
+          </div>
+
+          <h3>{{ project.title }}</h3>
+
+          <p>
+            {{ project.description }}
+          </p>
+
+        </div>
+      </div>
     </div>
 
     <div class="cta">
       <router-link to="/projects" class="primary">
-          View Projects
+        View All Projects
       </router-link>
     </div>
+
   </div>
 </template>
 
@@ -28,47 +43,180 @@ const projects = [
   {
     id: 1,
     title: "ARK Breeding Companion App",
-    description: "C# tool for managing ARK breeding—tracking stats, optimizing pairings, and simplifying complex workflows."
+    description:
+      "C# tool for managing ARK breeding—tracking stats, optimizing pairings, and simplifying complex workflows."
   },
   {
     id: 2,
     title: "C# Practice Projects",
-    description: "Small applications and exercises reinforcing core C# concepts and problem-solving skills."
+    description:
+      "Small applications and exercises reinforcing core C# concepts and problem-solving skills."
   },
   {
     id: 3,
     title: "Developer Portfolio Website",
-    description: "Vue-based portfolio showcasing projects and skills, built with reusable components and clean structure."
+    description:
+      "Vue-based portfolio showcasing projects and skills, built with reusable components and clean structure."
   }
 ]
 
 const displayedProjects = computed(() =>
-  props.limit ? projects.slice(0, props.limit) : projects
+  props.limit
+    ? projects.slice(0, props.limit)
+    : projects
 )
 </script>
 
 <style scoped>
+.projects-section {
+  width: 100%;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .card {
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  transition: 0.2s ease;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.05),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+
+  border-color: rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
 }
 
-.cta {
-  grid-column: 1 / -1;   /* span full grid width */
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+
+  padding: 2rem;
+
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-top {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tag {
+  font-size: 0.75rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  padding:
+    0.35rem 0.7rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color:
+    rgba(255,255,255,0.75);
+}
+
+h3 {
+  font-size: 1.3rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: white;
+}
+
+p {
+  line-height: 1.7;
+
+  color:
+    rgba(255,255,255,0.75);
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
+
+  padding:
+    0.9rem 1.6rem;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #7c3aed
+    );
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(124,58,237,0.35);
+}
+
+.projects-section{
+  animation: fadeUp 0.8s ease-out;
 }
 </style>
