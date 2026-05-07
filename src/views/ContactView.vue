@@ -22,11 +22,7 @@
     <!-- ========================= -->
     <section class="contact-wrapper">
 
-      <form
-        action="https://formsubmit.co/alex.sprague.webdesign@gmail.com"
-        method="POST"
-        class="contact-card"
-      >
+      <form action="https://formsubmit.co/6e3b188ede6049622d2d41cb939c6ebc" method="POST" class="contact-card">
 
         <!-- FormSubmit Settings -->
         <input type="hidden" name="_captcha" value="false">
@@ -40,15 +36,8 @@
               First Name
             </label>
 
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="John"
-              pattern="[A-Za-z]+"
-              title="First name cannot contain numbers."
-              required
-            >
+            <input type="text" id="firstName" name="firstName" placeholder="John" pattern="[A-Za-z]+"
+              title="First name cannot contain numbers." required>
 
           </div>
 
@@ -58,15 +47,8 @@
               Last Name
             </label>
 
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="Doe"
-              pattern="[A-Za-z]+"
-              title="Last name cannot contain numbers."
-              required
-            >
+            <input type="text" id="lastName" name="lastName" placeholder="Doe" pattern="[A-Za-z]+"
+              title="Last name cannot contain numbers." required>
 
           </div>
 
@@ -81,13 +63,7 @@
               Email
             </label>
 
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="example@email.com"
-              required
-            >
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
 
           </div>
 
@@ -97,14 +73,8 @@
               Phone Number
             </label>
 
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="123-456-7890"
-              pattern="[0-9\-()\s]+"
-              title="Phone number cannot contain letters."
-            >
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9\-()\s]+"
+              title="Phone number cannot contain letters.">
 
           </div>
 
@@ -117,13 +87,8 @@
             Message
           </label>
 
-          <textarea
-            id="message"
-            name="message"
-            rows="8"
-            placeholder="Tell me about your project, question, or opportunity..."
-            required
-          ></textarea>
+          <textarea id="message" name="message" rows="8"
+            placeholder="Tell me about your project, question, or opportunity..." required></textarea>
 
         </div>
 
@@ -147,7 +112,6 @@
 </script>
 
 <style scoped>
-
 /* ========================= */
 /* PAGE                      */
 /* ========================= */
@@ -361,11 +325,9 @@ button {
 
   border-radius: 14px;
 
-  background: linear-gradient(
-    135deg,
-    #ffffff,
-    #d9d9d9
-  );
+  background: linear-gradient(135deg,
+      #ffffff,
+      #d9d9d9);
 
   color: black;
 
@@ -427,5 +389,4 @@ button:active {
   }
 
 }
-
 </style>
