@@ -5,15 +5,10 @@
     <div class="category">
       <h3>Languages</h3>
       <div class="skills">
-        <span
-          v-for="skill in languages"
-          :key="skill.name"
-          class="skill"
-          :style="{
-            '--hover-color': skill.color,
-            '--text-color': skill.textColor
-          }"
-        >
+        <span v-for="skill in languages" :key="skill.name" class="skill" :style="{
+          '--hover-color': skill.color,
+          '--text-color': skill.textColor
+        }">
           {{ skill.name }}
         </span>
       </div>
@@ -23,15 +18,10 @@
     <div class="category">
       <h3>Frameworks & Tools</h3>
       <div class="skills">
-        <span
-          v-for="skill in frameworks"
-          :key="skill.name"
-          class="skill"
-          :style="{
-            '--hover-color': skill.color,
-            '--text-color': skill.textColor
-          }"
-        >
+        <span v-for="skill in frameworks" :key="skill.name" class="skill" :style="{
+          '--hover-color': skill.color,
+          '--text-color': skill.textColor
+        }">
           {{ skill.name }}
         </span>
       </div>
@@ -59,8 +49,9 @@ const frameworks = [
 .skills-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 24px;
   animation: fadeUp 0.8s ease-out;
+  margin-bottom: 100px;
 }
 
 /* CATEGORY */
@@ -78,13 +69,13 @@ const frameworks = [
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 24px;
   justify-content: center;
 }
 
 /* CHIP */
 .skill {
-  padding: 0.5rem 1rem;
+  padding: 16px 16px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 0.9rem;

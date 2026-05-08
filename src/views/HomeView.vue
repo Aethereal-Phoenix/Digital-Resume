@@ -1,11 +1,9 @@
 <template>
   <div class="home">
 
-    <!-- ========================= -->
-    <!-- HERO / LANDING SECTION    -->
-    <!-- ========================= -->
-    <section class="hero">
-      <HeroSection />
+    <!-- LANDING SECTION -->
+    <section class="section main">
+      <MainSection />
     </section>
 
 
@@ -13,66 +11,41 @@
     <!-- FEATURED PROJECTS         -->
     <!-- ========================= -->
     <section class="section featured-projects">
-      <SectionHeader 
-        title="Featured Projects"
-        subtitle="A selection of work showcasing my skills"
-      />
+      <SectionHeader title="Featured Projects" subtitle="A selection of work showcasing my skills" />
 
       <div class="content">
         <ProjectGrid :limit="3" />
       </div>
     </section>
 
-
-    <!-- ========================= -->
-    <!-- ABOUT PREVIEW             -->
-    <!-- ========================= -->
+    <!-- ABOUT PREVIEW -->
     <section class="section about-preview">
-      <SectionHeader 
-        title="About Me"
-        subtitle="Who I am and what I focus on"
-      />
+      <SectionHeader title="About Me" subtitle="Who I am and what I focus on" />
 
       <div class="content">
         <AboutPreview />
       </div>
     </section>
 
-
-    <!-- ========================= -->
-    <!-- SKILLS / TECH STACK       -->
-    <!-- ========================= -->
+    <!-- LANGUAGES AND FRAMEWORKS-->
     <section class="section skills">
-      <SectionHeader 
-        title="Skills & Technologies"
-        subtitle="Tools I use to build software"
-      />
+      <SectionHeader title="Languages & Frameworks" subtitle="Tools I use to build software" />
 
       <div class="content">
         <SkillsGrid />
       </div>
     </section>
 
-
-    <!-- ========================= -->
-    <!-- CALL TO ACTION            -->
-    <!-- ========================= -->
-    <!-- <section class="cta">
-      <CallToAction />
-    </section> -->
-
-
   </div>
 </template>
 
 <script setup>
-// Sections (you’ll build these one at a time)
-import HeroSection from '../components/home/HeroSection.vue'
+// Sections
+import MainSection from '../components/home/MainSection.vue'
 import SectionHeader from '../components/shared/SectionHeader.vue'
 import ProjectGrid from '../components/projects/ProjectGrid.vue'
 import AboutPreview from '../components/home/AboutPreview.vue'
 import SkillsGrid from '../components/home/SkillsGrid.vue'
-import CallToAction from '../components/home/CallToAction.vue'
 </script>
 
 <style scoped>
@@ -81,25 +54,16 @@ import CallToAction from '../components/home/CallToAction.vue'
   flex-direction: column;
 }
 
-/* Shared section styling */
 .section {
-  padding: 3rem 2rem;
+  padding: 20px 20px;
 }
 
-/* Keep hero visually dominant */
-.hero {
-  display: block; /* 🔥 remove flex centering */
+.main {
+  display: block;
 }
 
-/* Content wrapper for consistent width */
 .content {
   max-width: 1100px;
   margin: 0 auto;
-}
-
-/* CTA usually stands out */
-.cta {
-  padding: 5rem 2rem;
-  text-align: center;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="hero-container">
+  <div class="main-container">
 
-    <div class="hero-content">
+    <div class="main-content">
       <!-- HEADLINE -->
       <h1>
         Computer Science Student
@@ -17,15 +17,15 @@
   </div>
 </template>
 
-<script setup>
+<script>
 </script>
 
 <style>
-.hero-container {
+.main-container {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0rem;
+  padding: 0px;
 
   display: flex;
   align-items: flex-start;
@@ -34,15 +34,13 @@
   min-height: 50vh;
 }
 
-/* CONTENT WRAPPER */
-.hero-content {
+.main-content {
   text-align: center;
   animation: fadeUp 0.8s ease-out;
 }
 
-/* HEADLINE */
 h1 {
-  font-size: 3rem;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -50,7 +48,7 @@ h1 {
 /* ACCENT TEXT */
 .accent {
   display: block;
-  color: #4f46e5;
+  color: #7600ff;
 }
 
 /* SUBTEXT */

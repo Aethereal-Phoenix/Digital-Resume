@@ -26,11 +26,11 @@
 <style scoped>
 .navbar {
   background-color: #111;
-  padding: 1rem 2rem;
+  padding: .5rem 1rem;
 
   position: sticky;
   top: 0;
-  z-index: 1000; /* 🔥 prevents it from being covered */
+  z-index: 1000;
 }
 
 .nav-container {
@@ -42,14 +42,14 @@
 .logo a {
   color: #fff;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 24px;
   text-decoration: none;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .nav-links a {
@@ -59,6 +59,6 @@
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: #7600ff;
 }
 </style>

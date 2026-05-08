@@ -25,7 +25,7 @@
 }
 
 .about p {
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
   line-height: 1.6;
 }
 
@@ -36,7 +36,7 @@
 .link {
   display: inline-block;
   margin-top: 1rem;
-  color: #4f46e5;
+  color: #7600ff;
   text-decoration: none;
   font-weight: 500;
 }
