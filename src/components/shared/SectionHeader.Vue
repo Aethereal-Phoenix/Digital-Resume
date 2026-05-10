@@ -24,7 +24,7 @@ h2 {
 }
 
 p {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   opacity: 0.7;
 }
 </style>

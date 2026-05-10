@@ -55,7 +55,7 @@ import SkillsGrid from '../components/home/SkillsGrid.vue'
 }
 
 .section {
-  padding: 20px 20px;
+  padding: 1.25rem 1.25rem;
 }
 
 .main {

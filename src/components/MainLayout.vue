@@ -25,7 +25,7 @@ import NavBar from './NavBar.vue'
   flex: 1;
   display: flex;
   justify-content: center;
-  padding: 0px 16px;
+  padding: 0rem 1rem;
 }
 
 .content-container {

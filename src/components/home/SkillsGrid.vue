@@ -49,43 +49,40 @@ const frameworks = [
 .skills-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.25rem;
   animation: fadeUp 0.8s ease-out;
-  margin-bottom: 100px;
+  margin-bottom: 7rem;
 }
 
-/* CATEGORY */
 .category {
   text-align: center;
 }
 
 .category h3 {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   opacity: 0.8;
 }
 
-/* GRID */
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 1rem;
   justify-content: center;
 }
 
 /* CHIP */
 .skill {
-  padding: 16px 16px;
+  padding: 1rem 1rem;
   border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  border-radius: 1.25rem;
+  font-size: 1rem;
 
   background: transparent;
   transition: all 0.2s ease;
   cursor: default;
 }
 
-/* HOVER EFFECT */
 .skill:hover {
   transform: translateY(-4px) scale(1.05);
   background: var(--hover-color);

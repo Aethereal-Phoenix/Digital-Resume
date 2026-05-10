@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="cta">
+    <div class="projects-button">
       <router-link to="/projects" class="primary">
         View All Projects
       </router-link>
@@ -84,9 +84,9 @@ const displayedProjects = computed(() =>
 
   background: rgba(255, 255, 255, 0.04);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: .1rem solid rgba(255, 255, 255, 0.08);
 
-  border-radius: 18px;
+  border-radius: 1rem;
 
   overflow: hidden;
 
@@ -148,7 +148,7 @@ const displayedProjects = computed(() =>
 .tag {
   font-size: 0.75rem;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1rem;
 
   text-transform: uppercase;
 
@@ -187,9 +187,9 @@ p {
   justify-content: center;
 
   padding:
-    0.9rem 1.6rem;
+    .75rem 1.5rem;
 
-  border-radius: 12px;
+  border-radius: 1.25rem;
 
   text-decoration: none;
 
@@ -199,9 +199,9 @@ p {
 
   background:
     linear-gradient(
-      135deg,
-      #4f46e5,
-      #7c3aed
+      45deg,
+      #7600ff,
+      #042ed9
     );
 
   transition:
@@ -213,10 +213,14 @@ p {
   transform: translateY(-2px);
 
   box-shadow:
-    0 8px 20px rgba(124,58,237,0.35);
+    0 8px 24px rgba(118, 0, 255, .75);
 }
 
 .projects-section{
   animation: fadeUp 0.8s ease-out;
+}
+
+.projects-button{
+  margin-top: 1rem;
 }
 </style>

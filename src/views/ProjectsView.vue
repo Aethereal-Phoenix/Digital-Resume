@@ -4,22 +4,18 @@
     <!-- ========================= -->
     <!-- HERO SECTION              -->
     <!-- ========================= -->
-    <section class="hero">
+    <section class="main">
 
       <h1>My Projects</h1>
-
-      <p class="eyebrow">Portfolio</p>
       
-      <p class="hero-text">
+      <p class="main-text">
         A collection of coursework, personal projects, and ongoing learning
         focused on web development, software engineering, and cybersecurity.
       </p>
 
     </section>
 
-    <!-- ========================= -->
-    <!-- FEATURED PROJECTS         -->
-    <!-- ========================= -->
+    <!-- FEATURED PROJECTS -->
     <section class="section">
 
       <div class="section-heading">
@@ -31,7 +27,7 @@
         </p>
       </div>
 
-      <div class="project-grid">
+      <div class="featured-project-grid">
 
         <article
           v-for="project in featuredProjects"
@@ -85,9 +81,7 @@
 
     </section>
 
-    <!-- ========================= -->
-    <!-- OTHER LEARNING            -->
-    <!-- ========================= -->
+    <!-- OTHER LEARNING -->
     <section class="section">
 
       <div class="section-heading">
@@ -126,10 +120,7 @@
 
   </div>
 
-
-    <!-- ========================= -->
-    <!-- ADDITIONAL PROJECTS       -->
-    <!-- ========================= -->
+    <!-- ADDITIONAL PROJECTS -->
     <section class="section">
 
       <details class="additional-projects">
@@ -288,9 +279,7 @@ const learning = [
 
 <style scoped>
 
-/* ========================= */
-/* PAGE LAYOUT               */
-/* ========================= */
+/* PAGE LAYOUT */
 
 .projects-page {
   max-width: 1200px;
@@ -298,38 +287,26 @@ const learning = [
   padding: 0rem 1.5rem;
 }
 
-/* ========================= */
-/* HERO                      */
-/* ========================= */
+/* MAIN */
 
-.hero {
+.main {
   margin-bottom: 1rem;
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  opacity: 0.6;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-}
-
-.hero h1 {
+.main h1 {
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1,5rem;
 }
 
-.hero-text {
+.main-text {
   max-width: 700px;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   opacity: 0.8;
 }
 
-/* ========================= */
-/* SECTIONS                  */
-/* ========================= */
+/* SECTIONS */
 
 .section {
   margin-bottom: 5rem;
@@ -341,37 +318,33 @@ const learning = [
 
 .section-heading h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .section-heading p {
   opacity: 0.7;
 }
 
-/* ========================= */
-/* PROJECT GRID              */
-/* ========================= */
+/* PROJECT GRID */
 
-.project-grid {
+.featured-project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
 }
 
-/* ========================= */
-/* PROJECT CARD              */
-/* ========================= */
+/* PROJECT CARD */
 
 .project-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  min-height: 320px;
+  min-height: 20rem;
 
   padding: 1.5rem;
 
-  border-radius: 20px;
+  border-radius: 1.25rem;
 
   background: rgba(255, 255, 255, 0.03);
 
@@ -404,7 +377,7 @@ const learning = [
 }
 
 .card-top h3 {
-  font-size: 1.4rem;
+  font-size: 1,5rem;
   margin-bottom: 1rem;
 }
 
@@ -413,31 +386,27 @@ const learning = [
   opacity: 0.8;
 }
 
-/* ========================= */
-/* TAGS                      */
-/* ========================= */
+/* TAGS */
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 
 .tag {
-  padding: 0.4rem 0.8rem;
+  padding: .5rem 1rem;
 
-  border-radius: 999px;
+  border-radius: 1000px;
 
-  font-size: 0.8rem;
+  font-size: .8rem;
 
   background: rgba(255, 255, 255, 0.08);
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ========================= */
-/* BUTTONS                   */
-/* ========================= */
+/* BUTTONS */
 
 .card-actions {
   display: flex;
@@ -451,9 +420,9 @@ const learning = [
   justify-content: center;
   align-items: center;
 
-  padding: 0.75rem 1rem;
+  padding: .8rem 1rem;
 
-  border-radius: 10px;
+  border-radius: .6rem;
 
   text-decoration: none;
 
@@ -475,15 +444,12 @@ const learning = [
 .secondary {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
-
-/* ========================= */
-/* ADDITIONAL PROJECTS       */
-/* ========================= */
+/* ADDITIONAL PROJECTS */
 
 .additional-projects {
   padding: 1.5rem;
 
-  border-radius: 20px;
+  border-radius: 1.25rem;
 
   background: rgba(255, 255, 255, 0.03);
 
@@ -495,7 +461,7 @@ const learning = [
 
   list-style: none;
 
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
 
   transition: opacity 0.2s ease;
@@ -516,14 +482,12 @@ const learning = [
 .additional-text {
   opacity: 0.7;
 
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 
   line-height: 1.6;
 }
 
-/* ========================= */
-/* LEARNING SECTION          */
-/* ========================= */
+/* LEARNING SECTION */
 
 .learning-grid {
   display: grid;
@@ -537,7 +501,7 @@ const learning = [
 
   padding: 1.5rem;
 
-  border-radius: 16px;
+  border-radius: 1rem;
 
   background: rgba(255, 255, 255, 0.03);
 
@@ -545,16 +509,14 @@ const learning = [
 }
 
 .learning-card h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .learning-card p {
   opacity: 0.7;
 }
 
-/* ========================= */
-/* MOBILE                    */
-/* ========================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 

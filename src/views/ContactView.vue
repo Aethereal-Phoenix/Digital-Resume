@@ -1,25 +1,16 @@
 <template>
   <div class="contact-page">
-
-    <!-- ========================= -->
-    <!-- HERO                      -->
-    <!-- ========================= -->
-    <section class="hero">
-
-      <p class="eyebrow">Contact</p>
-
+    <section class="main">
       <h1>Let’s Connect</h1>
 
-      <p class="hero-text">
+      <p class="main-text">
         Questions, opportunities, collaborations, or project inquiries —
         feel free to send a message.
       </p>
 
     </section>
 
-    <!-- ========================= -->
-    <!-- CONTACT CARD              -->
-    <!-- ========================= -->
+    <!-- CONTACT CARD -->
     <section class="contact-wrapper">
 
       <form action="https://formsubmit.co/6e3b188ede6049622d2d41cb939c6ebc" method="POST" class="contact-card">
@@ -112,9 +103,7 @@
 </script>
 
 <style scoped>
-/* ========================= */
-/* PAGE                      */
-/* ========================= */
+/* PAGE */
 
 .contact-page {
   width: 100%;
@@ -127,27 +116,12 @@
   box-sizing: border-box;
 }
 
-/* ========================= */
-/* HERO                      */
-/* ========================= */
-
-.hero {
+.main {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 64px;
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-
-  opacity: 0.55;
-
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
+.main h1 {
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1;
 
@@ -167,9 +141,7 @@
   opacity: 0.72;
 }
 
-/* ========================= */
-/* CONTACT WRAPPER           */
-/* ========================= */
+/* CONTACT WRAPPER */
 
 .contact-wrapper {
   width: 100%;
@@ -177,10 +149,6 @@
   display: flex;
   justify-content: center;
 }
-
-/* ========================= */
-/* CONTACT CARD              */
-/* ========================= */
 
 .contact-card {
   width: 100%;
@@ -207,9 +175,7 @@
   box-sizing: border-box;
 }
 
-/* ========================= */
-/* ROWS                      */
-/* ========================= */
+/* ROWS */
 
 .row {
   width: 100%;
@@ -225,9 +191,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* ========================= */
-/* INPUT GROUP               */
-/* ========================= */
+/* INPUT GROUP */
 
 .input-group {
   width: 100%;
@@ -251,10 +215,7 @@
 
   color: rgba(255, 255, 255, 0.62);
 }
-
-/* ========================= */
-/* INPUTS                    */
-/* ========================= */
+/* INPUTS */
 
 input,
 textarea {
@@ -305,9 +266,7 @@ textarea {
   min-height: 150px;
 }
 
-/* ========================= */
-/* BUTTON                    */
-/* ========================= */
+/* BUTTON */
 
 .button-row {
   display: flex;
@@ -323,7 +282,7 @@ button {
 
   min-width: 180px;
 
-  border-radius: 14px;
+  border-radius: .8rem;
 
   background: linear-gradient(135deg,
       #ffffff,
@@ -350,16 +309,14 @@ button:hover {
   opacity: 0.95;
 
   box-shadow:
-    0 14px 30px rgba(255, 255, 255, 0.08);
+    0.8rem 1.9rem rgba(255, 255, 255, 0.08);
 }
 
 button:active {
   transform: translateY(0);
 }
 
-/* ========================= */
-/* MOBILE                    */
-/* ========================= */
+/* MOBILE */
 
 @media (max-width: 750px) {
 

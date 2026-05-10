@@ -1,18 +1,30 @@
 <template>
   <nav class="navbar">
     <div class="nav-container">
-      
+
       <!-- Logo / Name -->
       <div class="logo">
         <RouterLink to="/">Alex Sprague</RouterLink>
       </div>
 
+      <div>
+        <PokemonAsync />
+      </div>
+
       <!-- Navigation Links -->
       <ul class="nav-links">
-        <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/about">About</RouterLink></li>
-        <li><RouterLink to="/projects">Projects</RouterLink></li>
-        <li><RouterLink to="/contact">Contact</RouterLink></li>
+        <li>
+          <RouterLink to="/">Home</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/about">About</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/projects">Projects</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/contact">Contact</RouterLink>
+        </li>
       </ul>
 
     </div>
@@ -20,7 +32,7 @@
 </template>
 
 <script setup>
-// no logic yet — keep it simple
+import PokemonAsync from "./shared/PokemonAsync.vue"
 </script>
 
 <style scoped>
@@ -42,14 +54,14 @@
 .logo a {
   color: #fff;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .nav-links a {

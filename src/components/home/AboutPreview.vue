@@ -25,7 +25,7 @@
 }
 
 .about p {
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
   line-height: 1.6;
 }
 
