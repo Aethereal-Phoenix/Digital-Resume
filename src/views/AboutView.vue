@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="page fade-up">
     <h1>About Alex Sprague</h1>
-    <section id="about-me">
+    <section id="about-content">
 
       <p>
         I am a Computer Science student at Ozarks Technical Community College
@@ -78,9 +78,6 @@
 </template>
 
 <style scoped>
-#about-me {
-  animation: fadeUp 0.8s ease-out;
-}
 </style>
 
 <script setup>

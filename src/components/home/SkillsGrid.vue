@@ -1,5 +1,5 @@
 <template>
-  <div class="skills-wrapper">
+  <div class="skills-wrapper fade-up">
 
     <!-- LANGUAGES -->
     <div class="category">
@@ -46,48 +46,4 @@ const frameworks = [
 </script>
 
 <style scoped>
-.skills-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  animation: fadeUp 0.8s ease-out;
-  margin-bottom: 7rem;
-}
-
-.category {
-  text-align: center;
-}
-
-.category h3 {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  opacity: 0.8;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-/* CHIP */
-.skill {
-  padding: 1rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 1.25rem;
-  font-size: 1rem;
-
-  background: transparent;
-  transition: all 0.2s ease;
-  cursor: default;
-}
-
-.skill:hover {
-  transform: translateY(-4px) scale(1.05);
-  background: var(--hover-color);
-  color: var(--text-color);
-  border-color: var(--hover-color);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
 </style>

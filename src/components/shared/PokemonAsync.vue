@@ -26,13 +26,13 @@
     align-items: center;
     gap: 1rem;
 
-    background-color: #1e1e1e;
-    border: 2px solid #333;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-light);
 
     padding: 0.75rem 1rem;
     border-radius: 12px;
 
-    color: white;
+    color: var(--text-primary);
 
     min-width: 250px;
 }
@@ -74,6 +74,14 @@
 
     text-transform: capitalize;
     font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+
+  .pokemon-card {
+    min-width: auto;
+  }
+
 }
 </style>
 

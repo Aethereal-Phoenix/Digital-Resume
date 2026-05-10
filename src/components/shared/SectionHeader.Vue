@@ -13,18 +13,4 @@ defineProps({
 </script>
 
 <style scoped>
-.section-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-p {
-  margin-top: .5rem;
-  opacity: 0.7;
-}
 </style>

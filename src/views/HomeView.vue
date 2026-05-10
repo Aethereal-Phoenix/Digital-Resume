@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <div class="page">
 
     <!-- LANDING SECTION -->
-    <section class="section main">
+    <section class="section">
       <MainSection />
     </section>
 
@@ -49,21 +49,4 @@ import SkillsGrid from '../components/home/SkillsGrid.vue'
 </script>
 
 <style scoped>
-.home {
-  display: flex;
-  flex-direction: column;
-}
-
-.section {
-  padding: 1.25rem 1.25rem;
-}
-
-.main {
-  display: block;
-}
-
-.content {
-  max-width: 1100px;
-  margin: 0 auto;
-}
 </style>

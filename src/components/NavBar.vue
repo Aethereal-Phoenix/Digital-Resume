@@ -36,41 +36,4 @@ import PokemonAsync from "./shared/PokemonAsync.vue"
 </script>
 
 <style scoped>
-.navbar {
-  background-color: #111;
-  padding: .5rem 1rem;
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo a {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #ddd;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #7600ff;
-}
 </style>
