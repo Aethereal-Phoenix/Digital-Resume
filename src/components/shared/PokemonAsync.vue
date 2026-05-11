@@ -121,5 +121,5 @@ async function callPokemonApi() {
 callPokemonApi();
 
 // Then run every 10 seconds
-setInterval(callPokemonApi, 20000);
+setInterval(callPokemonApi, 10000);
 </script>

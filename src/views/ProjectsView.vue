@@ -1,13 +1,11 @@
 <template>
   <div class="page fade-up">
 
-    <!-- ========================= -->
-    <!-- HERO SECTION              -->
-    <!-- ========================= -->
-    <section class="section">
+    <!-- MAIN SECTION -->
+    <section class="section text-center">
 
       <h1>My Projects</h1>
-      
+
       <p class="page-subtitle">
         A collection of coursework, personal projects, and ongoing learning
         focused on web development, software engineering, and cybersecurity.
@@ -29,15 +27,11 @@
 
       <div class="grid-auto">
 
-        <article
-          v-for="project in featuredProjects"
-          :key="project.title"
-          class="glass-card"
-        >
+        <article v-for="project in featuredProjects" :key="project.title" class="glass-card">
 
           <div class="card-content">
 
-            <div class="card-top">
+            <div>
 
               <h3>{{ project.title }}</h3>
 
@@ -50,11 +44,7 @@
             <!-- TECH TAGS -->
             <div class="tags">
 
-              <span
-                v-for="tech in project.tech"
-                :key="tech"
-                class="tag"
-              >
+              <span v-for="tech in project.tech" :key="tech" class="tag">
                 {{ tech }}
               </span>
 
@@ -65,11 +55,11 @@
           <!-- ACTION BUTTONS -->
           <div class="card-actions">
 
-            <a :href="project.live" target="_blank" class="btn primary">
+            <a :href="project.live" target="_blank" class="btn btn-primary">
               Live Site
             </a>
 
-            <a :href="project.repo" target="_blank" class="btn secondary">
+            <a :href="project.repo" target="_blank" class="btn btn-secondary">
               GitHub
             </a>
 
@@ -94,11 +84,7 @@
 
       <div class="learning-grid">
 
-        <div
-          v-for="item in learning"
-          :key="item.title"
-          class="learning-card glass-card"
-        >
+        <div v-for="item in learning" :key="item.title" class="learning-card glass-card">
 
           <div>
 
@@ -108,7 +94,7 @@
 
           </div>
 
-          <a :href="item.link" target="_blank" class="btn secondary">
+          <a :href="item.link" target="_blank" class="btn btn-secondary">
             View
           </a>
 
@@ -120,75 +106,67 @@
 
   </div>
 
-    <!-- ADDITIONAL PROJECTS -->
-    <section class="section">
+  <!-- ADDITIONAL PROJECTS -->
+  <section class="section">
 
-      <details class="additional-projects">
+    <details class="additional-projects">
 
-        <summary>
-          Additional Web Development Projects
-        </summary>
+      <summary>
+        Additional Web Development Projects
+      </summary>
 
-        <p class="additional-text">
-          Earlier coursework and foundational web development projects
-          focused on responsive layouts, semantic HTML, and CSS design.
-        </p>
+      <p class="additional-text">
+        Earlier coursework and foundational web development projects
+        focused on responsive layouts, semantic HTML, and CSS design.
+      </p>
 
-        <div class="project-grid additional-grid">
+      <div class="grid-auto">
 
-          <article
-            v-for="project in additionalProjects"
-            :key="project.title"
-            class="glass-card small-card"
-          >
+        <article v-for="project in additionalProjects" :key="project.title" class="glass-card small-card">
 
-            <div class="card-content">
+          <div class="card-content">
 
-              <div class="card-top">
+            <div>
 
-                <h3>{{ project.title }}</h3>
+              <h3>{{ project.title }}</h3>
 
-                <p class="description">
-                  {{ project.description }}
-                </p>
-
-              </div>
-
-              <!-- TECH TAGS -->
-              <div class="tags">
-
-                <span
-                  v-for="tech in project.tech"
-                  :key="tech"
-                  class="tag"
-                >
-                  {{ tech }}
-                </span>
-
-              </div>
+              <p class="description">
+                {{ project.description }}
+              </p>
 
             </div>
 
-            <!-- ACTION BUTTONS -->
-            <div class="card-actions">
+            <!-- TECH TAGS -->
+            <div class="tags">
 
-              <a :href="project.live" target="_blank" class="btn btn-primary">
-                Live Site
-              </a>
-
-              <a :href="project.repo" target="_blank" class="btn btn-secondary">
-                GitHub
-              </a>
+              <span v-for="tech in project.tech" :key="tech" class="tag">
+                {{ tech }}
+              </span>
 
             </div>
 
-          </article>
+          </div>
 
-        </div>
+          <!-- ACTION BUTTONS -->
+          <div class="card-actions">
 
-      </details>
+            <a :href="project.live" target="_blank" class="btn btn-primary">
+              Live Site
+            </a>
 
-    </section>
+            <a :href="project.repo" target="_blank" class="btn btn-secondary">
+              GitHub
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </details>
+
+  </section>
 </template>
 
 <script setup>
@@ -277,5 +255,4 @@ const learning = [
 
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

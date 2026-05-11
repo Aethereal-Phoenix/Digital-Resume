@@ -3,7 +3,7 @@
     <section class="section text-center">
       <h1>Let’s Connect</h1>
 
-      <p class="page-subtitle">
+      <p class="page-subtitle text-center">
         Questions, opportunities, collaborations, or project inquiries —
         feel free to send a message.
       </p>

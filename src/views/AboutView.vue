@@ -1,6 +1,6 @@
 <template>
   <div class="page fade-up">
-    <h1>About Alex Sprague</h1>
+    <h1 class="text-center">About <span class="accent">Alex Sprague</span></h1>
     <section id="about-content">
 
       <p>
