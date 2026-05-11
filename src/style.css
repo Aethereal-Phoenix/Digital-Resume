@@ -391,6 +391,17 @@ a {
   min-height: 280px;
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link:hover .glass-card {
+  transform: translateY(-4px);
+  transition: 0.25s ease;
+}
+
 /* TAGS */
 
 .tag {

@@ -4,6 +4,7 @@
     <div class="grid-auto">
       <div v-for="project in displayedProjects" :key="project.id" class="glass-card">
         
+        <a :href="project.url" target="blank" class="project-link">
         <div class="card-content">
 
           <div class="card-top">
@@ -17,7 +18,9 @@
           </p>
 
         </div>
+        </a>
       </div>
+      
     </div>
 
     <div class="projects-button">
@@ -41,19 +44,22 @@ const projects = [
     id: 1,
     title: "ARK Breeding Companion App",
     description:
-      "C# tool for managing ARK breeding—tracking stats, optimizing pairings, and simplifying complex workflows."
+      "C# tool for managing ARK breeding—tracking stats, optimizing pairings, and simplifying complex workflows.",
+    url: "https://github.com/Aethereal-Phoenix/Ark-Breeding-Calculator"
   },
   {
     id: 2,
     title: "C# Practice Projects",
     description:
-      "Small applications and exercises reinforcing core C# concepts and problem-solving skills."
+      "Small applications and exercises reinforcing core C# concepts and problem-solving skills.",
+    url: "https://github.com/Aethereal-Phoenix/Csharp_Players_Guide_5th_Edition"
   },
   {
     id: 3,
     title: "Developer Portfolio Website",
     description:
-      "Vue-based portfolio showcasing projects and skills, built with reusable components and clean structure."
+      "Vue-based portfolio showcasing projects and skills, built with reusable components and clean structure.",
+      url: "https://github.com/Aethereal-Phoenix/Digital-Resume"
   }
 ]
 
