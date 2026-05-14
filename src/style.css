@@ -19,6 +19,25 @@
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
 
+  --space-xxs: 0.5rem;
+  --space-xs: 0.75;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 5rem;
+  --space-3xl: 7rem;
+
+  --text-sm: 0.75rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2xl: 3rem;
+  --text-3xl: 4rem;
+
+  --cardHeight-base: 150px;
+
   --shadow-card:
     0 10px 30px rgba(0, 0, 0, 0.25);
 
@@ -26,9 +45,8 @@
   --transition-normal: 0.3s ease;
 
   --content-width: 1100px;
-}
+}/* End of root */
 
-/* GLOBAL RESET */
 
 * {
   box-sizing: border-box;
@@ -64,23 +82,23 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(3rem, 6vw, 4rem);
-  line-height: 1.1;
+  font-size: clamp(-text-2xl, 6vw, --text-3xl);
+  line-height: var(--space-lg);
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--text-xl);
   font-weight: 600;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: var(--text-md);
   font-weight: 600;
 }
 
 p {
-  line-height: 1.7;
+  line-height: var(--space-md);
   color: var(--text-secondary);
 }
 
@@ -89,9 +107,9 @@ a {
 }
 
 .about-text {
-  margin-bottom: 1rem;
-  max-width: 600px;
-  margin: auto;
+  margin-bottom: var(--space-sm);
+  width: 100%;
+  margin: var(--space-sm);
 }
 
 .about-content {
@@ -99,7 +117,7 @@ a {
 }
 
 .about-content p {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-md);
 }
 
 /* LAYOUT */
@@ -110,11 +128,11 @@ a {
 
   margin: 0 auto;
 
-  padding: 0 1.5rem;
+  padding: 0 var(--space-md);
 }
 
 .section {
-  padding: 3rem 0;
+  padding: var(--space-xxs) 0;
 }
 
 .content {
@@ -141,7 +159,7 @@ a {
   display: flex;
   justify-content: center;
 
-  padding: 0 1rem;
+  padding: 0 var(--space-sm);
 }
 
 /* NAVBAR */
@@ -153,9 +171,9 @@ a {
 
   z-index: 1000;
 
-  padding: 0.5rem 1rem;
+  padding: var(--space-xxs) var(--sapce-sm);
 
-  background: #111;
+  background: linear-gradient(0deg, #0f0f0f, #262626);
 }
 
 .nav-container {
@@ -167,7 +185,7 @@ a {
 .logo a {
   text-decoration: none;
 
-  font-size: 1.5rem;
+  font-size: var(--text-lg);
   font-weight: 700;
 }
 
@@ -175,7 +193,6 @@ a {
   list-style: none;
 
   display: flex;
-  gap: 1.5rem;
 
   margin: 0;
   padding: 0;
@@ -187,6 +204,8 @@ a {
   color: #ddd;
 
   transition: color var(--transition-fast);
+
+  padding: var(--space-sm)
 }
 
 .nav-links a:hover {
@@ -199,8 +218,7 @@ a {
   width: 100%;
   max-width: var(--content-width);
 
-  min-height: 50vh;
-
+  padding: var(--space-xl);
   margin: 0 auto;
 
   display: flex;
@@ -213,7 +231,7 @@ a {
 }
 
 .accent {
-  display: block;
+  display: inline;
 
   color: var(--accent);
 }
@@ -222,7 +240,7 @@ a {
   max-width: 600px;
 
   margin:
-    1rem auto 0;
+    var(--space-sm) auto 0;
 }
 
 /* SECTION HEADERS */
@@ -230,11 +248,11 @@ a {
 .section-header {
   text-align: center;
 
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-xl);
 }
 
 .section-header p {
-  margin-top: 0.5rem;
+  margin-top: var(--space-xxs);
 }
 
 /* GLASS CARD SYSTEM */
@@ -248,14 +266,13 @@ a {
 
   background: var(--glass-bg);
 
-  border: 1px solid var(--border-light);
+  border: 1px solid rgb(118, 0, 255, .5);
 
   border-radius: var(--radius-lg);
 
   backdrop-filter: blur(12px);
 
   overflow: hidden;
-
   transition:
     transform var(--transition-fast),
     border-color var(--transition-fast),
@@ -277,19 +294,17 @@ a {
 
   flex: 1;
 
-  padding: 2rem;
+  padding: var(--space-xl);
 }
 
 .card-actions {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-sm);
 
-  margin-top: 2rem;
+  margin-top: var(--space-lg);
 }
 
-/* =========================================================
-   PROJECT GRIDS
-========================================================= */
+/* PROJECT GRIDS */
 
 .grid-auto {
   display: grid;
@@ -297,11 +312,11 @@ a {
   grid-template-columns:
     repeat(auto-fit, minmax(280px, 1fr));
 
-  gap: 2rem;
+  gap: var(--space-xl);
 }
 
 .projects-button {
-  margin-top: 1rem;
+  margin-top: var(--space-md);
 }
 
 .card-top {
@@ -310,18 +325,18 @@ a {
 }
 
 .page-subtitle {
-  max-width: 700px;
+  max-width: 100%;
 
   margin:
-    0 auto 2rem;
+    0 auto var(--space-lg);
 
-  font-size: 1.25rem;
+  font-size: var(--text-md);
 
   text-align: center;
 }
 
 .section-heading {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
 }
 
 .section-heading p {
@@ -335,10 +350,10 @@ a {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-xxs);
 
   margin-top: auto;
-  padding-top: 3rem;
+  padding-top: var(--space-xl);
 }
 
 .learning-grid {
@@ -347,18 +362,18 @@ a {
   grid-template-columns:
     repeat(auto-fit, minmax(320px, 1fr));
 
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .learning-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: var(--space-sm);
 }
 
 .additional-projects {
-  padding: 1.5rem;
+  padding: var(--space-md);
 
   border-radius: var(--radius-lg);
 
@@ -380,15 +395,15 @@ a {
 }
 
 .additional-projects[open] summary {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .additional-text {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
 }
 
 .small-card {
-  min-height: 280px;
+  min-height: var(--cardHeight-base);
 }
 
 .project-link {
@@ -400,6 +415,7 @@ a {
 .project-link:hover .glass-card {
   transform: translateY(-4px);
   transition: 0.25s ease;
+  cursor: pointer;
 }
 
 /* TAGS */
@@ -408,11 +424,11 @@ a {
   display: inline-flex;
   align-items: center;
 
-  padding: 0.4rem 0.8rem;
+  padding: var(--space-xxs) var(--space-sm);
 
   border-radius: 999px;
 
-  font-size: 0.75rem;
+  font-size: var(--text-sm);
 
   letter-spacing: 0.08rem;
 
@@ -431,14 +447,14 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  
 
-  padding: 0.85rem 1.5rem;
-  margin: .75rem;
 
-  min-height: 48px;
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-xs);
 
-  border-radius: 1rem;
+  min-height: var(--space-xl);
+
+  border-radius: var(--radius-md);
 
   text-decoration: none;
 
@@ -479,7 +495,7 @@ a {
 .about-link {
   display: inline-block;
 
-  margin-top: 1rem;
+  margin-top: var(--space-sm);
 
   color: var(--accent);
 
@@ -497,7 +513,7 @@ a {
 .skills-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--space-md);
 }
 
 .category {
@@ -508,13 +524,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-sm);
 }
 
 .skill {
-  padding: 1rem;
+  padding: var(--space-sm);
 
-  border-radius: 1.25rem;
+  border-radius: var(--radius-lg);
 
   border: 1px solid #ccc;
 
@@ -537,11 +553,11 @@ a {
 }
 
 .skills-wrapper {
-  margin-bottom: 7rem;
+  margin-bottom: var(--space-3xl);
 }
 
 .category h3 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 
   opacity: 0.8;
 }
@@ -554,14 +570,14 @@ a {
   display: flex;
   flex-direction: column;
 
-  gap: 2rem;
+  gap: var(--space-lg);
 
-  padding: 2.75rem;
+  padding: var(--space-xl);
 }
 
 .row {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--space-md);
 }
 
 .two-column {
@@ -574,9 +590,9 @@ a {
 }
 
 .input-group label {
-  margin-bottom: 0.7rem;
+  margin-bottom: var(--space-xs);
 
-  font-size: 0.8rem;
+  font-size: 0.8rem var(--text-sm);
   font-weight: 600;
 
   text-transform: uppercase;
@@ -589,9 +605,9 @@ input,
 textarea {
   width: 100%;
 
-  padding: 1rem 1.1rem;
+  padding: var(--space-sm);
 
-  border-radius: 1rem;
+  border-radius: var(--radius-md);
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 
@@ -644,7 +660,7 @@ textarea {
   display: flex;
   justify-content: flex-end;
 
-  margin-top: 0.5rem;
+  margin-top: var(--space-xxs);
 }
 
 .btn-primary {
@@ -678,18 +694,18 @@ textarea {
   }
 
   .card-actions {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: var(--space-sm);
 
-  margin-top: 2rem;
+    margin-top: var(--space-lg);
 
-  padding:
-    0 2rem 2rem;
-}
+    padding:
+      0 var(--space-lg) var(--space-lg);
+  }
 
   .nav-container {
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-md);
   }
 
   .main-container {
@@ -697,7 +713,7 @@ textarea {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: var(--text-xl);
   }
 
   .learning-card {

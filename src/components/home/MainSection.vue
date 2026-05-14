@@ -5,6 +5,7 @@
       <!-- HEADLINE -->
       <h1>
         Computer Science Student
+        <br>
         <span class="accent">Building Real Software</span>
       </h1>
 

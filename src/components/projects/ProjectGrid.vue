@@ -1,26 +1,26 @@
 <template>
-  <div class="projects-section fade-up">
+  <div class="fade-up">
 
     <div class="grid-auto">
       <div v-for="project in displayedProjects" :key="project.id" class="glass-card">
-        
+
         <a :href="project.url" target="blank" class="project-link">
-        <div class="card-content">
+          <div class="card-content">
 
-          <div class="card-top">
-            <span class="tag">Project</span>
+            <div class="card-top">
+              <span class="tag">Project</span>
+            </div>
+
+            <h3>{{ project.title }}</h3>
+
+            <p>
+              {{ project.description }}
+            </p>
+
           </div>
-
-          <h3>{{ project.title }}</h3>
-
-          <p>
-            {{ project.description }}
-          </p>
-
-        </div>
         </a>
       </div>
-      
+
     </div>
 
     <div class="projects-button">
@@ -59,7 +59,7 @@ const projects = [
     title: "Developer Portfolio Website",
     description:
       "Vue-based portfolio showcasing projects and skills, built with reusable components and clean structure.",
-      url: "https://github.com/Aethereal-Phoenix/Digital-Resume"
+    url: "https://github.com/Aethereal-Phoenix/Digital-Resume"
   }
 ]
 

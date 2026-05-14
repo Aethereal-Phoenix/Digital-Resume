@@ -94,7 +94,7 @@
 
           </div>
 
-          <a :href="item.link" target="_blank" class="btn btn-secondary">
+          <a :href="item.link" target="_blank" class="btn btn-primary">
             View
           </a>
 

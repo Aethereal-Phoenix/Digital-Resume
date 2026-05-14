@@ -3,8 +3,8 @@
     <div class="nav-container">
 
       <!-- Logo / Name -->
-      <div class="logo">
-        <RouterLink to="/">Alex Sprague</RouterLink>
+      <div class="logo text-center">
+        <RouterLink to="/">Alex <span class="accent">Sprague</span></RouterLink>
       </div>
 
       <div>
