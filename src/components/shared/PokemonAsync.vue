@@ -8,7 +8,7 @@
         <div class="pokemon-info">
             <div class="top-row">
                 <span class="name">{{ pokeName }}</span>
-                <span class="id">#{{ pokeId }}</span>
+                <span class="poke-id">#{{ pokeId }}</span>
             </div>
 
             <div class="bottom-row">
@@ -21,68 +21,6 @@
 </template>
 
 <style scoped>
-.pokemon-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    background-color: var(--bg-secondary);
-    border: 2px solid var(--border-light);
-
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
-
-    color: var(--text-primary);
-
-    min-width: 250px;
-}
-
-.sprite-container img {
-    width: 80px;
-    height: 80px;
-}
-
-.pokemon-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 80px;
-}
-
-.top-row,
-.bottom-row {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.name {
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 1.1rem;
-}
-
-.id {
-    color: #999;
-}
-
-.bottom-row span {
-    background-color: #333;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-
-    text-transform: capitalize;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 700px) {
-
-  .pokemon-card {
-    min-width: auto;
-  }
-
-}
 </style>
 
 <script setup>

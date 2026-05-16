@@ -16,7 +16,7 @@
     <!-- FEATURED PROJECTS -->
     <section class="section">
 
-      <div class="section-heading">
+      <div class="section-heading text-center">
         <h2>Featured Projects</h2>
 
         <p>

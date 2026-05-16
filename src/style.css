@@ -20,7 +20,7 @@
   --radius-lg: 1.5rem;
 
   --space-xxs: 0.5rem;
-  --space-xs: 0.75;
+  --space-xs: 0.75rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
@@ -109,7 +109,6 @@ a {
 .about-text {
   margin-bottom: var(--space-sm);
   width: 100%;
-  margin: var(--space-sm);
 }
 
 .about-content {
@@ -125,21 +124,15 @@ a {
 .page {
   width: 100%;
   max-width: var(--content-width);
-
-  margin: 0 auto;
-
-  padding: 0 var(--space-md);
 }
 
 .section {
-  padding: var(--space-xxs) 0;
+  padding: var(--space-xxs);
 }
 
 .content {
   width: 100%;
   max-width: var(--content-width);
-
-  margin: 0 auto;
 }
 
 .text-center {
@@ -171,7 +164,7 @@ a {
 
   z-index: 1000;
 
-  padding: var(--space-xxs) var(--sapce-sm);
+  padding: var(--space-xxs) var(--space-xs);
 
   background: linear-gradient(0deg, #0f0f0f, #262626);
 }
@@ -180,11 +173,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: var(--space-xl);
 }
 
 .logo a {
   text-decoration: none;
 
+  padding-top: var(--space-xl);
   font-size: var(--text-lg);
   font-weight: 700;
 }
@@ -194,7 +189,7 @@ a {
 
   display: flex;
 
-  margin: 0;
+  margin-bottom: var(--space-xxs);
   padding: 0;
 }
 
@@ -215,11 +210,9 @@ a {
 /* MAIN */
 
 .main-container {
-  width: 100%;
   max-width: var(--content-width);
 
-  padding: var(--space-xl);
-  margin: 0 auto;
+  padding-top: var(--space-sm);
 
   display: flex;
   justify-content: center;
@@ -263,6 +256,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 
   background: var(--glass-bg);
 
@@ -294,14 +288,11 @@ a {
 
   flex: 1;
 
-  padding: var(--space-xl);
+  padding: var(--space-sm);
 }
 
 .card-actions {
   display: flex;
-  gap: var(--space-sm);
-
-  margin-top: var(--space-lg);
 }
 
 /* PROJECT GRIDS */
@@ -316,12 +307,16 @@ a {
 }
 
 .projects-button {
+  display: flex;
+  justify-content: center;
+
   margin-top: var(--space-md);
 }
 
 .card-top {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: var(--space-xxs);
 }
 
 .page-subtitle {
@@ -358,9 +353,6 @@ a {
 
 .learning-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(320px, 1fr));
 
   gap: var(--space-md);
 }
@@ -448,9 +440,13 @@ a {
   align-items: center;
   justify-content: center;
 
+  padding: var(--space-sm) var(--space-md);
+
+  min-height: var(--space-xl);
+
 
   padding: var(--space-sm) var(--space-md);
-  margin: var(--space-xs);
+  margin: auto;
 
   min-height: var(--space-xl);
 
@@ -466,6 +462,8 @@ a {
     box-shadow var(--transition-fast);
 
   cursor: pointer;
+
+  
 }
 
 .btn:hover {
@@ -685,48 +683,82 @@ textarea {
   }
 }
 
+/* Pokemon card */
+.pokemon-wrapper {
+  display: none;
+  height: 0px;
+}
+
+.pokemon-card {
+    display: flex;
+    align-items: center;
+    margin: auto;
+
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-light);
+
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+
+    color: var(--text-primary);
+
+    min-width: 250px;
+}
+
+.sprite-container img {
+    width: 80px;
+    height: 80px;
+}
+
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 80px;
+}
+
+.top-row,
+.bottom-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.name {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+.poke-id {
+    color: #999;
+}
+
+.bottom-row span {
+    background-color: #333;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+
+
 /* RESPONSIVE */
 
+/* Tablet */
 @media (max-width: 768px) {
-
-  .two-column {
-    grid-template-columns: 1fr;
+  .site-main {
+    width: 100vw;
   }
 
-  .card-actions {
-    display: flex;
-    gap: var(--space-sm);
+  .about-content {
+  padding: var(--space-md) var(--space-xl);
+}
+}
 
-    margin-top: var(--space-lg);
-
-    padding:
-      0 var(--space-lg) var(--space-lg);
-  }
-
-  .nav-container {
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-
-  .main-container {
-    min-height: auto;
-  }
-
-  h1 {
-    font-size: var(--text-xl);
-  }
-
-  .learning-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .button-row {
-    justify-content: stretch;
-  }
-
-  .button-row .btn {
-    width: 100%;
-  }
+/* Desktop / PC */
+@media (min-width: 1024px) {
+  
 }

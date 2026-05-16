@@ -1,7 +1,7 @@
 <template>
   <div class="page fade-up">
-    <h1 class="text-center">About <span class="accent">Alex Sprague</span></h1>
-    <section id="about-content">
+    <h1 class="text-center">About <br><span class="accent">Alex Sprague</span></h1>
+    <section class="about-content">
 
       <p>
         I am a Computer Science student at Ozarks Technical Community College

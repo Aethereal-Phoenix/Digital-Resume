@@ -7,10 +7,10 @@
         <RouterLink to="/">Alex <span class="accent">Sprague</span></RouterLink>
       </div>
 
-      <div>
+      <div class="pokemon-wrapper">
         <PokemonAsync />
       </div>
-
+ 
       <!-- Navigation Links -->
       <ul class="nav-links">
         <li>
