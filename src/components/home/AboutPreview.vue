@@ -1,4 +1,4 @@
-
+<!-- The compnent that displays a small amount of text about me -->
 <template>
   <div class="text-center fade-up">
     <p class="about-text">
@@ -10,11 +10,9 @@
       I prioritize real-world projects over tutorials, with a focus on clean code, readability, and seeing things through to completion.
     </p>
 
+    <!-- Button to take the user to my ABOUT page -->
     <router-link to="/about" class="btn btn-primary">
       Read More →
     </router-link>
   </div>
 </template>
-
-<style scoped>
-</style>

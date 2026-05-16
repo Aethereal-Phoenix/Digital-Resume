@@ -1,24 +1,30 @@
-/* ROOT VARIABLES */
-
+/* Root variables */
 :root {
+  /* Background color */
   --bg-primary: #0f0f0f;
   --bg-secondary: #171717;
 
+  /* Text color */
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.72);
 
+  /* Accent color */
   --accent: #7600ff;
   --accent-secondary: #042ed9;
 
+  /* Border color */
   --border-light: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.18);
 
+  /* Background for the glass cards */
   --glass-bg: rgba(255, 255, 255, 0.04);
 
+  /* Radius sizes */
   --radius-sm: 0.75rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
 
+  /* Spacing */
   --space-xxs: 0.5rem;
   --space-xs: 0.75rem;
   --space-sm: 1rem;
@@ -28,6 +34,7 @@
   --space-2xl: 5rem;
   --space-3xl: 7rem;
 
+  /* Font size */
   --text-sm: 0.75rem;
   --text-base: 1rem;
   --text-md: 1.125rem;
@@ -36,74 +43,80 @@
   --text-2xl: 3rem;
   --text-3xl: 4rem;
 
+  /* The heigh of the cards */
   --cardHeight-base: 150px;
 
-  --shadow-card:
-    0 10px 30px rgba(0, 0, 0, 0.25);
+  /* Card shadow */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.25);
 
+  /* Transition speed */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
 
+  /* Content Width */
   --content-width: 1100px;
 }
 
 /* End of root */
 
-
+/* General */
 * {
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* gives the page scrolling a smooth apearance*/
 }
 
 body {
   margin: 0;
 
-  background: var(--bg-primary);
+  background: var(--bg-primary); 
 
   color: var(--text-primary);
 
-  font-family:
-    Inter,
-    system-ui,
-    sans-serif;
+  /* Gives the font of the site a look similar to IDEs */
+  font-family: "Cascadia Code", Consolas, monospace;
 }
 
-/* TYPOGRAPHY */
+/* Typtography */
 
+/* All header tags do not on themselves impact the structure of the site */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
+/* Gives all H1 tags a consistent look */
 h1 {
   font-size: clamp(-text-2xl, 6vw, --text-3xl);
   line-height: var(--space-lg);
   font-weight: 700;
 }
 
+/* Gives all H2 tags a consistent look */
 h2 {
   font-size: var(--text-xl);
   font-weight: 600;
 }
 
+/* Gives all H3 tags a consistent look */
 h3 {
   font-size: var(--text-md);
   font-weight: 600;
 }
 
+/* Sets the appearance of p tags */
 p {
   line-height: var(--space-md);
   color: var(--text-secondary);
 }
 
+/* a tags use the same color as their parent element */
 a {
   color: inherit;
 }

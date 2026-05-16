@@ -7,6 +7,7 @@
           <RouterLink to="/">Alex <span class="accent">Sprague</span></RouterLink>
         </div>
         
+        <!-- PokeMon display -->
         <div class="pokemon-wrapper">
         <PokemonAsync />
       </div>
@@ -32,5 +33,6 @@
 </template>
 
 <script setup>
+// Imports the Pokemon component so it can be used in the navbar
 import PokemonAsync from '../components/shared/PokemonAsync.vue'
 </script>

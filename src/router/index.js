@@ -1,11 +1,15 @@
+// Imports
 import { createRouter, createWebHistory } from 'vue-router'
-
-// Import your views (pages)
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
 import ContactView from '../views/ContactView.vue'
 
+// Routes
+
+// path: dicates what the path will show in the url
+// name: the name of the route
+// component: the component to be used in the route
 const routes = [
   {
     path: '/',
@@ -29,10 +33,13 @@ const routes = [
   }
 ]
 
+// Router
 const router = createRouter({
+  // allows the path from the route to show in the url
   history: createWebHistory(),
   routes,
 
+  // Any time the user goes to a new "page" they will be taken to the top of the page
   scrollBehavior(to, from, savedPosition) {
 
     if (savedPosition) {
@@ -45,4 +52,5 @@ const router = createRouter({
   }
 })
 
+// Default
 export default router

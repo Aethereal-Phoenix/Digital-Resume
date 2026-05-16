@@ -1,9 +1,12 @@
+<!-- Component to display the languages and frameworks I know -->
 <template>
   <div class="skills-wrapper fade-up">
 
-    <!-- LANGUAGES -->
+    <!-- My Languages -->
     <div class="category">
       <h3>Languages</h3>
+      <!-- Displays all of my known languages using a json object constructed in the script section of this page -->
+      <!-- Dynamically collects the name to display but also indivudual styling to make each unique -->
       <div class="skills">
         <span v-for="skill in languages" :key="skill.name" class="skill" :style="{
           '--hover-color': skill.color,
@@ -14,9 +17,12 @@
       </div>
     </div>
 
-    <!-- FRAMEWORKS -->
+    <!-- My Languages -->
     <div class="category">
       <h3>Frameworks & Tools</h3>
+      
+      <!-- Displays all of my known frameworks using a json object constructed in the script section of this page -->
+      <!-- Dynamically collects the name to display but also indivudual styling to make each unique -->
       <div class="skills">
         <span v-for="skill in frameworks" :key="skill.name" class="skill" :style="{
           '--hover-color': skill.color,
@@ -31,6 +37,8 @@
 </template>
 
 <script setup>
+// Json of all my known languages
+// color and textColor are what the object changes to when hovered over
 const languages = [
   { name: "C#", color: "#68217A", textColor: "#ffffff" },
   { name: "JavaScript", color: "#f7df1e", textColor: "#000000" },
@@ -38,12 +46,11 @@ const languages = [
   { name: "CSS", color: "#264de4", textColor: "#ffffff" }
 ]
 
+// Json of the frameworks I'm familiar with
+// color and textColor are what the object changes to when hovered over
 const frameworks = [
   { name: "ASP.NET", color: "#512bd4", textColor: "#ffffff" },
   { name: "Vue", color: "#42b883", textColor: "#ffffff" },
   { name: ".NET MAUI", color: "#512bd4", textColor: "#ffffff" }
 ]
 </script>
-
-<style scoped>
-</style>

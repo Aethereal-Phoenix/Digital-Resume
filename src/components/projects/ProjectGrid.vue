@@ -1,9 +1,12 @@
+<!-- Comnponent to display some of my best projects to date -->
 <template>
   <div class="fade-up">
 
+    <!-- Grid to diplay my three best project so far -->
+    <!-- Uses a Json to gather the parts needed to dynamically make each card -->
     <div class="grid-auto">
-      <div v-for="project in displayedProjects" :key="project.id" class="glass-card">
-
+      <div v-for="project in projects" :key="project.id" class="glass-card">
+        <!-- the entire card displayed is a link that takes the user to the GitHub of that project -->
         <a :href="project.url" target="blank" class="project-link">
           <div class="card-content">
 
@@ -23,6 +26,7 @@
 
     </div>
 
+    <!-- Button to take the user to the Project page to see al my projects -->
     <div class="projects-button">
       <router-link to="/projects" class="btn btn-primary">
         View All Projects
@@ -33,12 +37,10 @@
 </template>
 
 <script setup>
+// Imports
 import { computed } from 'vue'
 
-const props = defineProps({
-  limit: Number
-})
-
+// Json of my projects to display
 const projects = [
   {
     id: 1,
@@ -62,12 +64,4 @@ const projects = [
     url: "https://github.com/Aethereal-Phoenix/Digital-Resume"
   }
 ]
-
-const displayedProjects = computed(() =>
-  props.limit
-    ? projects.slice(0, props.limit)
-    : projects
-)
 </script>
-
-<style scoped></style>

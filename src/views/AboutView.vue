@@ -1,3 +1,4 @@
+<!-- Component that talks about me -->
 <template>
   <div class="page fade-up">
     <h1 class="text-center">About <br><span class="accent">Alex Sprague</span></h1>
@@ -76,10 +77,3 @@
     </section>
   </div>
 </template>
-
-<style scoped>
-</style>
-
-<script setup>
-// clean
-</script>

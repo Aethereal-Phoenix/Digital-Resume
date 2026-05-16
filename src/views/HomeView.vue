@@ -14,7 +14,7 @@
       <SectionHeader title="Featured Projects" subtitle="A selection of work showcasing my skills" />
 
       <div class="content">
-        <ProjectGrid :limit="3" />
+        <ProjectGrid/>
       </div>
     </section>
 
