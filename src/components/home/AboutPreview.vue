@@ -1,3 +1,4 @@
+
 <template>
   <div class="text-center fade-up">
     <p class="about-text">

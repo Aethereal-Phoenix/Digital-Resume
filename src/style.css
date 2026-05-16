@@ -45,7 +45,9 @@
   --transition-normal: 0.3s ease;
 
   --content-width: 1100px;
-}/* End of root */
+}
+
+/* End of root */
 
 
 * {
@@ -112,7 +114,7 @@ a {
 }
 
 .about-content {
-  max-width: 900px;
+  max-width: 100%;
 }
 
 .about-content p {
@@ -156,7 +158,6 @@ a {
 }
 
 /* NAVBAR */
-
 .navbar {
   position: sticky;
 
@@ -173,7 +174,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--space-xl);
+  padding-top: var(--space-sm);
 }
 
 .logo a {
@@ -188,6 +189,8 @@ a {
   list-style: none;
 
   display: flex;
+  justify-content: center;
+  gap: var(--space-xxs);
 
   margin-bottom: var(--space-xxs);
   padding: 0;
@@ -200,12 +203,19 @@ a {
 
   transition: color var(--transition-fast);
 
-  padding: var(--space-sm)
+  padding: var(--space-xxs);
 }
 
 .nav-links a:hover {
   color: var(--accent);
 }
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /* MAIN */
 
@@ -293,6 +303,7 @@ a {
 
 .card-actions {
   display: flex;
+  margin-bottom: var(--space-sm);
 }
 
 /* PROJECT GRIDS */
@@ -443,9 +454,6 @@ a {
   padding: var(--space-sm) var(--space-md);
 
   min-height: var(--space-xl);
-
-
-  padding: var(--space-sm) var(--space-md);
   margin: auto;
 
   min-height: var(--space-xl);
@@ -462,8 +470,6 @@ a {
     box-shadow var(--transition-fast);
 
   cursor: pointer;
-
-  
 }
 
 .btn:hover {
@@ -579,7 +585,7 @@ a {
 }
 
 .two-column {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .input-group {
@@ -646,7 +652,7 @@ textarea {
 }
 
 .contact-page {
-  max-width: 1000px;
+  max-width: 100%;
 }
 
 .contact-wrapper {
@@ -690,75 +696,100 @@ textarea {
 }
 
 .pokemon-card {
-    display: flex;
-    align-items: center;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  margin: auto;
 
-    background-color: var(--bg-secondary);
-    border: 2px solid var(--border-light);
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-light);
 
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
+  padding: var(--space-xs) var(--space-xs);
+  border-radius: 12px;
 
-    color: var(--text-primary);
+  color: var(--text-primary);
 
-    min-width: 250px;
+  min-width: 250px;
+  min-height: 100px;
 }
 
 .sprite-container img {
-    width: 80px;
-    height: 80px;
+  width: 50px;
+  height: 50px;
 }
 
 .pokemon-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    height: 80px;
+  height: 50px;
 }
 
 .top-row,
 .bottom-row {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
 }
 
 .name {
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: var(--text-md);
 }
 
 .poke-id {
-    color: #999;
+  color: #999;
+  font-size: var(--text-md)
 }
 
 .bottom-row span {
-    background-color: #333;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
+  background-color: #333;
+  padding: var(--space-xxs) var(--space-xs);
+  border-radius: 6px;
 
-    text-transform: capitalize;
-    font-size: 0.9rem;
+  text-transform: capitalize;
+  font-size: var(--text-sm);
 }
 
 
 /* RESPONSIVE */
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .site-main {
-    width: 100vw;
+    width: 100%;
   }
 
   .about-content {
-  padding: var(--space-md) var(--space-xl);
-}
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Navbar Tablet */
+  .pokemon-wrapper {
+    display: flex;
+    height: auto;
+    align-items: center;
+    margin-bottom: var(--space-xxs)
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    min-height: 100px;
+  }
 }
 
 /* Desktop / PC */
 @media (min-width: 1024px) {
-  
+  .logo a {
+    font-size: var(--text-xl);
+  }
 }
